@@ -166,7 +166,7 @@ AutoTest.Net/
 
 # Installshield output folder
 [Ee]xpress/
-**/lib/VSFiles/
+**/libs/vsfiles/
 
 # DocProject is a documentation generator add-in
 DocProject/buildhelp/
@@ -516,7 +516,7 @@ storybook-static
 # Temporary folders
 tmp/
 temp/
-lib/VSFiles/
+libs/vsfiles/
 
 ### VisualStudioCode ###
 .vscode/*
