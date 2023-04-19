@@ -1,2 +1,10 @@
 #pragma once
-void fnDataLayer();
+class DataLayer
+{
+public:
+	DataLayer();
+	~DataLayer();
+
+private:
+
+};

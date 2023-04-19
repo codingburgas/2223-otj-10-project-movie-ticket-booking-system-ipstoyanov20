@@ -73,7 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)libs</OutDir>
     <IntDir>$(SolutionDir)libs\vsfiles</IntDir>
-    <IncludePath>$(SolutionDir)src;$(IncludePath)</IncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -91,7 +91,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)libs</OutDir>
     <IntDir>$(SolutionDir)libs\vsfiles</IntDir>
-    <IncludePath>$(SolutionDir)src;$(IncludePath)</IncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -156,6 +156,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BookingSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.vcxproj">
+      <Project>{88424c01-8910-4bb8-a585-18ee8944e9a7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicLayer\LogicLayer.vcxproj">
+      <Project>{3c977501-41a4-4834-a0ca-84e1ca05371f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\PresentationLayer\PresentationLayer.vcxproj">
+      <Project>{769de1a1-7b1a-46de-a01c-83bf915dadea}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

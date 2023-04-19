@@ -1,5 +1,11 @@
 #include "pch.h"
+#include "DataLayer.hpp"
 
-void fnDataLayer()
+
+DataLayer::DataLayer()
+{
+}
+
+DataLayer::~DataLayer()
 {
 }

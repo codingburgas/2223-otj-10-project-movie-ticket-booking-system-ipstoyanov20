@@ -1,5 +1,11 @@
 #include "pch.h"
+#include "LogicLayer.hpp"
 
-void fnLogicLayer()
+LogicLayer::LogicLayer()
+{
+
+}
+
+LogicLayer::~LogicLayer()
 {
 }

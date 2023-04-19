@@ -1,2 +1,11 @@
 #pragma once
-void fnLogicLayer();
+class LogicLayer
+{
+public:
+	LogicLayer();
+	~LogicLayer();
+
+private:
+
+};
+
