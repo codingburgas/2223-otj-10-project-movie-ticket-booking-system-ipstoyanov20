@@ -21,12 +21,18 @@
     <ClInclude Include="DataLayer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="lib\nanodbc\nanodbc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataLayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\nanodbc\nanodbc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

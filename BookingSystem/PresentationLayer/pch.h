@@ -1,3 +1,3 @@
 #pragma once
 #include <iostream>
-#include "../libs/src/raylib.h"
+#include "src/raylib.h"
