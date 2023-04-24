@@ -5,9 +5,9 @@
 int main()
 {
     PresentationLayer presentationLayer;
-    DataLayer dataLayer;
-    dataLayer.connect();
-
+    Data data;
+    data.select(2);
     presentationLayer.createWindow();
+
     presentationLayer.closeWindow();
 }

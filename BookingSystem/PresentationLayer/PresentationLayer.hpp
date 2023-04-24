@@ -7,6 +7,8 @@ public:
 	void createWindow();
 	void closeWindow();
 private:
+	float getWidthPercentageOf(float vl);
+	float getHeightPercentageOf(float vl);
 	void draw();
 
 };
