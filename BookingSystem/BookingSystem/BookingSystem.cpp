@@ -6,7 +6,7 @@ int main()
 {
     PresentationLayer presentationLayer;
     Data data;
-    data.select(2);
+    data.select(1);
     presentationLayer.createWindow();
 
     presentationLayer.closeWindow();
