@@ -53,11 +53,26 @@
 //    // Execute the statement
 //    stmt.execute();
 //}
+Data* Data::instance = nullptr;
+Data* Data::getInstance()
+{
+    if (instance == nullptr)
+    {
+		instance = new Data();
+	}
+	return instance;
+}
+
+Data::Data()
+{
+
+}
+
 void Data::select(int id)
 {
-    nanodbc::connection conn_(NANODBC_TEXT("Driver={ODBC Driver 17 for SQL Server};Server=ticket-system.database.windows.net;Database=system;Uid=ipstoyanov20;Pwd={Qwer1234};Encrypt=yes;"));
-    // Define the SQL statement
-    nanodbc::execute(conn_, NANODBC_TEXT("USE system"));
+        
+        conn_.connect(NANODBC_TEXT("Driver={ODBC Driver 17 for SQL Server};Server=ticket-system.database.windows.net;Database=system;Uid=ipstoyanov20;Pwd={Qwer1234};Encrypt=yes;"));
+        // Define the SQL statement
         // Define the SQL statement
         std::string sql = "SELECT * FROM [User] WHERE id = ?";
 
@@ -82,4 +97,5 @@ void Data::select(int id)
         {
             std::cerr << "User not found" << std::endl;
         }
+        conn_.disconnect();
 }

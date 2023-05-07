@@ -1,4 +1,5 @@
 #pragma once
+#include "lib/nanodbc/nanodbc.h"
 class Data
 {
 public:
@@ -15,7 +16,10 @@ public:
 
     // Define a function to select a user from the database
     void select(int id);
-
+    ~Data();
+    static Data* getInstance();
 private:
-    
+    Data();
+    nanodbc::connection conn_;
+    static Data* instance;
 };
