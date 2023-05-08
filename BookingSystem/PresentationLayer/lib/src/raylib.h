@@ -181,6 +181,11 @@
 #define MAGENTA    CLITERAL(Color){ 255, 0, 255, 255 }     // Magenta
 #define RAYWHITE   CLITERAL(Color){ 245, 245, 245, 255 }   // My own White (raylib logo)
 
+//CUSTOM COLORS
+#define BACKGROUND_ADMIN   CLITERAL(Color){ 40, 46, 51, 255}  
+#define MENU_ADMIN   CLITERAL(Color){112, 110, 96, 255}   
+#define MENU_TEXT_FIELDS   CLITERAL(Color){160, 160, 160, 255}   
+#define MENU_TEXT_FIELDS_HOVER  CLITERAL(Color){102, 102, 102, 255}
 //----------------------------------------------------------------------------------
 // Structures Definition
 //----------------------------------------------------------------------------------
