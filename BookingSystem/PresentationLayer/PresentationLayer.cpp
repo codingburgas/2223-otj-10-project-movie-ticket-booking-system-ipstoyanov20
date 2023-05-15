@@ -4,21 +4,19 @@
 PresentationLayer::PresentationLayer()
 {
 	menuFields = {
-		{"City", Rectangle()},
-		{"Cinema", Rectangle()},
-		{"Hall", Rectangle()},
-		{"Film", Rectangle()},
-		{"Time", Rectangle()},
 
+		{"City", {{Rectangle(), 0}, {Rectangle(), Rectangle()}} },
+		{"Cinema", {{Rectangle(), 0}, {Rectangle(), Rectangle()}}},
+		{"Hall", {{Rectangle(), 0}, {Rectangle(), Rectangle()}}},
+		{"Time", {{Rectangle(), 0}, {Rectangle(), Rectangle()}}},
+		{"Film", {{Rectangle(), 0}, {Rectangle(), Rectangle()}}},
 	};
-	menuDropDowns = { Rectangle(), Rectangle() };
 	for (auto& [key, rect] : menuFields)
 	{
 		static int i = 1;
-		rect = Rectangle{ 40, (30.f + 75) * i, 200, 75 };
+		rect.first.first = Rectangle{ 40, (90.f + 75) * i, 200, 75 };
 		i++;
 	}
-	dropdown = 0;
 }
 
 PresentationLayer::~PresentationLayer()
@@ -29,6 +27,7 @@ void PresentationLayer::createWindow()
 {
 	InitWindow(0, 0, "MovieBookingSystem");
 	SetTargetFPS(60);
+	ToggleFullscreen();
 	while (!WindowShouldClose())
 	{
 		mousePoint = GetMousePosition();
@@ -46,6 +45,11 @@ bool PresentationLayer::isClicked(Vector2& mousePos,Rectangle&rect)
 		}
 	}
 }
+
+//void PresentationLayer::drawMenu()
+//{
+//
+//}
 void PresentationLayer::drawMenu()
 {
 	BeginDrawing();
@@ -53,30 +57,39 @@ void PresentationLayer::drawMenu()
 	DrawRectangleRounded(Rectangle{ 550, 50, 1300, GetScreenHeight() - 100.f}, 0.2, 0, MENU_ADMIN);
 	for (auto& [name, rect] : menuFields)
 	{
-		if (isClicked(mousePoint, rect) || CheckCollisionPointRec(mousePoint, rect))
+		if (isClicked(mousePoint, rect.first.first) || rect.first.second)
 		{
 
 			int i = 0;
-			for (auto& dropDownRect : menuDropDowns)
+			for (auto& dropDownRect : rect.second)
+			{
+				dropDownRect = Rectangle{ rect.first.first.x + 250,rect.first.first.y + i * (rect.first.first.width / 2.5f),rect.first.first.width,rect.first.first.height };
+				
+				rect.first.second = !isClicked(mousePoint, dropDownRect);
+
+				if (!rect.first.second) break;
+
+				i++;
+
+			}
+			i = 0;
+			for (auto& dropDownRect : rect.second)
 			{
 				
-				dropdown = !isClicked(mousePoint, dropDownRect);
-				dropDownRect = Rectangle{ rect.x + 250,rect.y + i * (rect.width / 2),rect.width,rect.height };
 				DrawRectangleRounded(dropDownRect, 0.2, 0, MENU_TEXT_FIELDS_HOVER);
-
 				i++;
 
 				DrawTextEx(Font(), (name + std::to_string(i)).c_str(), Vector2{dropDownRect.x + dropDownRect.width / 2.f - (20 / 2 + 3 * name.size() + 1), dropDownRect.y + dropDownRect.height / 2.f - (20 / 2)}, 20, 3, WHITE);
 			}
 		}
-		if (CheckCollisionPointRec(mousePoint, rect))
+		if (CheckCollisionPointRec(mousePoint, rect.first.first))
 		{
-			DrawRectangleRounded(rect, 0.2, 0, MENU_TEXT_FIELDS_HOVER);
+			DrawRectangleRounded(rect.first.first, 0.2, 0, MENU_TEXT_FIELDS_HOVER);
 		}
 		else
-			DrawRectangleRounded(rect, 0.2, 0, MENU_TEXT_FIELDS);
+			DrawRectangleRounded(rect.first.first, 0.2, 0, MENU_TEXT_FIELDS);
 
-		DrawTextEx(Font(), name.c_str(), Vector2{rect.x + rect.width / 2.f - (20 / 2 + 3 * name.size()), rect.y + rect.height / 2.f - (20 / 2)}, 20, 3, WHITE);
+		DrawTextEx(Font(), name.c_str(), Vector2{ rect.first.first.x + rect.first.first.width / 2.f - (20 / 2 + 3 * name.size()), rect.first.first.y + rect.first.first.height / 2.f - (20 / 2)}, 20, 3, WHITE);
 	}
 
 	EndDrawing();

@@ -66,12 +66,12 @@ Data* Data::getInstance()
 Data::Data()
 {
 
+        conn_.connect(NANODBC_TEXT("Driver={ODBC Driver 17 for SQL Server};Server=ticket-system.database.windows.net;Database=system;Uid=ipstoyanov20;Pwd={Qwer1234};Encrypt=yes;"));
 }
 
 void Data::select(int id)
 {
         
-        conn_.connect(NANODBC_TEXT("Driver={ODBC Driver 17 for SQL Server};Server=ticket-system.database.windows.net;Database=system;Uid=ipstoyanov20;Pwd={Qwer1234};Encrypt=yes;"));
         // Define the SQL statement
         // Define the SQL statement
         std::string sql = "SELECT * FROM [User] WHERE id = ?";
