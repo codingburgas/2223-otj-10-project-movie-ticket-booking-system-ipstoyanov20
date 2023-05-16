@@ -30,11 +30,14 @@ void PresentationLayer::createWindow()
 	ToggleFullscreen();
 	while (!WindowShouldClose())
 	{
-		mousePoint = GetMousePosition();
-		ClearBackground(BACKGROUND_ADMIN);
-		drawMenu();
+		BeginDrawing();
+			ClearBackground(BACKGROUND_ADMIN);
+			mousePoint = GetMousePosition();
+			drawMenu();
+		EndDrawing();
 	}
 }
+
 bool PresentationLayer::isClicked(Vector2& mousePos,Rectangle&rect)
 {
 	if (CheckCollisionPointRec(mousePos, rect))
@@ -46,13 +49,9 @@ bool PresentationLayer::isClicked(Vector2& mousePos,Rectangle&rect)
 	}
 }
 
-//void PresentationLayer::drawMenu()
-//{
-//
-//}
 void PresentationLayer::drawMenu()
 {
-	BeginDrawing();
+	
 	DrawRectangleRounded(Rectangle{ 20, 50, 250, GetScreenHeight() - 100.f}, 0.2, 0, MENU_ADMIN);
 	DrawRectangleRounded(Rectangle{ 550, 50, 1300, GetScreenHeight() - 100.f}, 0.2, 0, MENU_ADMIN);
 	for (auto& [name, rect] : menuFields)
@@ -92,19 +91,9 @@ void PresentationLayer::drawMenu()
 		DrawTextEx(Font(), name.c_str(), Vector2{ rect.first.first.x + rect.first.first.width / 2.f - (20 / 2 + 3 * name.size()), rect.first.first.y + rect.first.first.height / 2.f - (20 / 2)}, 20, 3, WHITE);
 	}
 
-	EndDrawing();
 }
 
 void PresentationLayer::closeWindow()
 {
 	CloseWindow();
-}
-
-float PresentationLayer::getWidthPercentageOf(float value)
-{
-	return (GetScreenWidth() / value);
-}
-float PresentationLayer::getHeightPercentageOf(float value)
-{
-	return GetScreenHeight() / value;
 }

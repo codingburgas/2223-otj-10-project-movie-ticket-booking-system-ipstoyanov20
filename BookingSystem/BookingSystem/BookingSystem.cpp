@@ -5,7 +5,7 @@ int main()
 {
     PresentationLayer presentationLayer;
     Data* data = Data::getInstance();
-    data->select(1);
+    data->select(3);
     presentationLayer.createWindow();
 
     presentationLayer.closeWindow();
