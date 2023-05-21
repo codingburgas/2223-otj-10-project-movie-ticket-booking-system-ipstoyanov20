@@ -1,5 +1,6 @@
 #pragma once
-#include "lib/nanodbc/nanodbc.h"
+#include "pch.h"
+
 class Data
 {
 public:
