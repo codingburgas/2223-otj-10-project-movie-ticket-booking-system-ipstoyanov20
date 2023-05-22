@@ -6,7 +6,16 @@ public:
 	LogicLayer();
 	~LogicLayer();
 
-private:
+protected:
+	Data* data;
+	bool isClicked(Vector2& mousePos, Rectangle& rect);
 
+	std::unordered_map<std::string,
+		std::pair<
+		std::pair<Rectangle, bool>, std::vector<Rectangle>
+		>
+	> menuFields;
+
+	Vector2 mousePoint;
 };
 

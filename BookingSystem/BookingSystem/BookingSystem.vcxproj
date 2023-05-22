@@ -73,25 +73,25 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)libs</OutDir>
     <IntDir>$(SolutionDir)libs\vsfiles</IntDir>
-    <IncludePath>$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)libs\include</IncludePath>
     <LibraryPath>$(SolutionDir)libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)libs</OutDir>
     <IntDir>$(SolutionDir)libs\vsfiles</IntDir>
-    <IncludePath>$(SolutionDir)src;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)libs\include</IncludePath>
     <LibraryPath>$(SolutionDir)libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)libs</OutDir>
     <IntDir>$(SolutionDir)libs\vsfiles</IntDir>
-    <IncludePath>$(SolutionDir)src;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)libs\include</IncludePath>
     <LibraryPath>$(SolutionDir)libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)libs</OutDir>
     <IntDir>$(SolutionDir)libs\vsfiles</IntDir>
-    <IncludePath>$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)libs\include</IncludePath>
     <LibraryPath>$(SolutionDir)libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

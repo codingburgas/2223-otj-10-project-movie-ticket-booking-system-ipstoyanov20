@@ -1,6 +1,6 @@
 #pragma once
 #include "pch.h"
-class PresentationLayer
+class PresentationLayer : public LogicLayer
 {
 public:
 	PresentationLayer();
@@ -8,15 +8,7 @@ public:
 	void createWindow();
 	void closeWindow();
 private:
-	bool isClicked(Vector2& mousePos, Rectangle& rect);
-
-	std::unordered_map<std::string, 
-		std::pair<
-		std::pair<Rectangle, bool>, std::vector<Rectangle>
-		>
-	> menuFields;
-
-	Vector2 mousePoint;
+	void drawLogin();
 	void drawMenu();
 
 };

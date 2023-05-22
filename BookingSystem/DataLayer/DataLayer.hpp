@@ -16,7 +16,7 @@ public:
     //void remove(int id);
 
     // Define a function to select a user from the database
-    void select(int id);
+    bool select(int id);
     ~Data();
     static Data* getInstance();
 private:

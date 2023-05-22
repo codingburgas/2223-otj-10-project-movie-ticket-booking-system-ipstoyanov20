@@ -69,7 +69,7 @@ Data::Data()
         conn_.connect(NANODBC_TEXT("Driver={ODBC Driver 17 for SQL Server};Server=ticket-system.database.windows.net;Database=system;Uid=ipstoyanov20;Pwd={Qwer1234};Encrypt=yes;"));
 }
 
-void Data::select(int id)
+bool Data::select(int id)
 {
         
         // Define the SQL statement
@@ -89,12 +89,14 @@ void Data::select(int id)
         // Print the results
         if (results.next())
         {
+            return true;
                 std::cout << "User: " << results.get<int>("id") << ", "
                 << results.get<std::string>("email") << ", "
                 << results.get<std::string>("password") << std::endl;
         }
         else
         {
+            return false;
             std::cerr << "User not found" << std::endl;
         }
         conn_.disconnect();
