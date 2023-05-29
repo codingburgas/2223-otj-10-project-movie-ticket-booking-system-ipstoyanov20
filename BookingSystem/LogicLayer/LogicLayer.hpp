@@ -1,14 +1,17 @@
 #pragma once
 #include "pch.h"
-class LogicLayer
+#include "Login.hpp"
+#include "SceneManager.hpp"
+class LogicLayer : public Login, public SceneManager
 {
 public:
 	LogicLayer();
 	~LogicLayer();
 
-protected:
 	Data* data;
+protected:
 	bool isClicked(Vector2& mousePos, Rectangle& rect);
+	//bool validate(std::string username, std::string password);
 
 	std::unordered_map<std::string,
 		std::pair<

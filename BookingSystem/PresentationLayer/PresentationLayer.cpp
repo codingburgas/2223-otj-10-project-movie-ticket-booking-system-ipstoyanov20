@@ -14,9 +14,11 @@ void PresentationLayer::createWindow()
 {
 	InitWindow(0, 0, "MovieBookingSystem");
 	SetTargetFPS(60);
-	ToggleFullscreen();
+	//ToggleFullscreen();
 	while (!WindowShouldClose())
 	{
+		//std::cout << validate("Deni", "Osussogurnosta");
+		//std::cout << (char)GetCharPressed() << std::endl;
 		 if (IsKeyPressed(KEY_A)) {
 			MinimizeWindow();
 			OpenURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
@@ -30,7 +32,10 @@ void PresentationLayer::createWindow()
 	}
 }
 
-
+void PresentationLayer::drawLogin()
+{
+	
+}
 
 void PresentationLayer::drawMenu()
 {

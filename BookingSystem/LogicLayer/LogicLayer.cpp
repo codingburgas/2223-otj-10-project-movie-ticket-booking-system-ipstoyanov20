@@ -19,6 +19,12 @@ LogicLayer::LogicLayer()
 		i++;
 	}
 }
+
+//bool LogicLayer::validate(std::string username, std::string password)
+//{
+//	return data->select("Deni", "Osussogurnosta");
+//}
+
 bool LogicLayer::isClicked(Vector2& mousePos, Rectangle& rect)
 {
 	return CheckCollisionPointRec(mousePos, rect) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT);

@@ -69,19 +69,20 @@ Data::Data()
         conn_.connect(NANODBC_TEXT("Driver={ODBC Driver 17 for SQL Server};Server=ticket-system.database.windows.net;Database=system;Uid=ipstoyanov20;Pwd={Qwer1234};Encrypt=yes;"));
 }
 
-bool Data::select(int id)
+void Data::select(std::string username, std::string password)
 {
-        
+        std::cout << "Selecting users...";
         // Define the SQL statement
         // Define the SQL statement
-        std::string sql = "SELECT * FROM [User] WHERE id = ?";
+        std::string sql = "SELECT * FROM [User] WHERE username = ? AND [password] = ?";
 
         // Prepare the SQL statement
         nanodbc::statement stmt(conn_);
         stmt.prepare(sql);
 
         // Bind the parameter to the statement
-        stmt.bind(0, &id);
+        stmt.bind(0, username.c_str());
+        stmt.bind(1, password.c_str());
 
         // Execute the statement
         nanodbc::result results = stmt.execute();
@@ -89,15 +90,15 @@ bool Data::select(int id)
         // Print the results
         if (results.next())
         {
-            return true;
-                std::cout << "User: " << results.get<int>("id") << ", "
-                << results.get<std::string>("email") << ", "
+                std::cout << "User: "
+                << results.get<std::string>("username") << ", "
                 << results.get<std::string>("password") << std::endl;
+            //return true;
         }
         else
         {
-            return false;
             std::cerr << "User not found" << std::endl;
+            //return false;
         }
         conn_.disconnect();
 }
