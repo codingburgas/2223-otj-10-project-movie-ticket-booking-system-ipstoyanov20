@@ -71,7 +71,7 @@ Data::Data()
 
 void Data::select(std::string username, std::string password)
 {
-        std::cout << "Selecting users...";
+        std::cout << "SELECTING USER FROM DATABASE....";
         // Define the SQL statement
         // Define the SQL statement
         std::string sql = "SELECT * FROM [User] WHERE username = ? AND [password] = ?";
@@ -90,8 +90,8 @@ void Data::select(std::string username, std::string password)
         // Print the results
         if (results.next())
         {
-                std::cout << "User: "
-                << results.get<std::string>("username") << ", "
+                std::cout << "IN DATABASE THERE IS USER: "
+                << results.get<std::string>("username") << ", PASSWORD:"
                 << results.get<std::string>("password") << std::endl;
             //return true;
         }

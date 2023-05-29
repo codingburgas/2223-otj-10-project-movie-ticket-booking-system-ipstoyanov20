@@ -32,4 +32,5 @@ bool LogicLayer::isClicked(Vector2& mousePos, Rectangle& rect)
 
 LogicLayer::~LogicLayer()
 {
+
 }

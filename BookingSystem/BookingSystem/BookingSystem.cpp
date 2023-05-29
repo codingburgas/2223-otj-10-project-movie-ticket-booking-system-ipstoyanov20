@@ -3,7 +3,7 @@
 int main()
 {
     PresentationLayer presentationLayer;
+    presentationLayer.data->select("vatev", "NaiSilnataParola");
     presentationLayer.createWindow();
-    presentationLayer.data->select("Deni", "Osussogurnost");
     presentationLayer.closeWindow();
 }

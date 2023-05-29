@@ -2,8 +2,6 @@
 class SceneManager
 {
 	public:
-	SceneManager();
-	~SceneManager();
 
 	enum Scenes : char {
 		LOGIN,
