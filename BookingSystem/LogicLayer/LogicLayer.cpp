@@ -1,9 +1,17 @@
 #include "pch.h"
 #include "LogicLayer.hpp"
-
 LogicLayer::LogicLayer()
 {
 	data = Data::getInstance();
+	inputFields = {
+		{
+				"Username", {0, Rectangle{0, 500, 400, 75}},
+		},
+		{
+				"Password", {0, Rectangle{ 0, 650, 400, 75 }}
+		}
+	};
+	submitButton = Rectangle{ 0, 800, 200, 75 };
 	menuFields = {
 
 		{"City", {{Rectangle(), 0}, {Rectangle(), Rectangle()}} },
@@ -18,6 +26,8 @@ LogicLayer::LogicLayer()
 		rect.first.first = Rectangle{ 40, (90.f + 75) * i, 200, 75 };
 		i++;
 	}
+	
+
 }
 
 //bool LogicLayer::validate(std::string username, std::string password)
@@ -28,6 +38,11 @@ LogicLayer::LogicLayer()
 bool LogicLayer::isClicked(Vector2& mousePos, Rectangle& rect)
 {
 	return CheckCollisionPointRec(mousePos, rect) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT);
+}
+
+bool LogicLayer::isUnfocusedClick(Vector2& mousePos, Rectangle& rect)
+{
+	return !CheckCollisionPointRec(mousePos, rect) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT);
 }
 
 LogicLayer::~LogicLayer()

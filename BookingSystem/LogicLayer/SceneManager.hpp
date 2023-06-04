@@ -1,13 +1,11 @@
 #pragma once
 class SceneManager
 {
-	public:
-
-	enum Scenes : char {
-		LOGIN,
+	protected:
+	enum Scenes : int {
 		MENU,
-	 } direction = MENU;
-
+		LOGIN,
+	 } direction = LOGIN;
 	
 };
 

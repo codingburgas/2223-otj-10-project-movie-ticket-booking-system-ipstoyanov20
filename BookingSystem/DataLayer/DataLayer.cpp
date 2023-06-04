@@ -66,12 +66,12 @@ Data* Data::getInstance()
 Data::Data()
 {
 
-        conn_.connect(NANODBC_TEXT("Driver={ODBC Driver 17 for SQL Server};Server=ticket-system.database.windows.net;Database=system;Uid=ipstoyanov20;Pwd={Qwer1234};Encrypt=yes;"));
+        conn_.connect(NANODBC_TEXT("Driver={ODBC Driver 17 for SQL Server};Server=movie-system.database.windows.net;Database=system;Uid=ipstoyanov20;Pwd={Qwer1234};Encrypt=yes;"));
 }
 
-void Data::select(std::string username, std::string password)
+bool Data::select(std::string username, std::string password)
 {
-        std::cout << "SELECTING USER FROM DATABASE....";
+    std::cout << "SELECTING USER FROM DATABASE....";
         // Define the SQL statement
         // Define the SQL statement
         std::string sql = "SELECT * FROM [User] WHERE username = ? AND [password] = ?";
@@ -93,12 +93,12 @@ void Data::select(std::string username, std::string password)
                 std::cout << "IN DATABASE THERE IS USER: "
                 << results.get<std::string>("username") << ", PASSWORD:"
                 << results.get<std::string>("password") << std::endl;
-            //return true;
+            return true;
         }
         else
         {
             std::cerr << "User not found" << std::endl;
-            //return false;
+            return false;
         }
         conn_.disconnect();
 }

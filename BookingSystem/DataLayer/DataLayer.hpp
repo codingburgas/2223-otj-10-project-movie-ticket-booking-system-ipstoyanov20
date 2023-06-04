@@ -16,7 +16,7 @@ public:
     //void remove(int id);
 
     // Define a function to select a user from the database
-    void select(std::string username, std::string password);
+    bool select(std::string username, std::string password);
     ~Data();
     static Data* getInstance();
 private:

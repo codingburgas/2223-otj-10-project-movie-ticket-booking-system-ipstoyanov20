@@ -11,4 +11,5 @@ private:
 	void drawLogin();
 	void drawMenu();
 
+	std::vector<std::function<void(PresentationLayer*)>> functions;
 };

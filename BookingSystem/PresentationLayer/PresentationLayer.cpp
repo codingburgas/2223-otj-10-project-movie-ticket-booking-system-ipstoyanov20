@@ -3,7 +3,11 @@
 
 PresentationLayer::PresentationLayer()
 {
-	
+
+	functions = {
+		[](PresentationLayer* obj) { obj->drawMenu(); },
+		[](PresentationLayer* obj) { obj->drawLogin(); },
+	};
 }
 
 PresentationLayer::~PresentationLayer()
@@ -17,29 +21,69 @@ void PresentationLayer::createWindow()
 	//ToggleFullscreen();
 	while (!WindowShouldClose())
 	{
-		//std::cout << validate("Deni", "Osussogurnosta");
-		//std::cout << (char)GetCharPressed() << std::endl;
 		 if (IsKeyPressed(KEY_A)) {
 			MinimizeWindow();
-			OpenURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+			OpenURL("https://www.youtube.com");
 		 }
 
 		BeginDrawing();
 			ClearBackground(BACKGROUND_ADMIN);
 			mousePoint = GetMousePosition();
-			drawMenu();
+			functions[direction](this);
 		EndDrawing();
 	}
 }
 
 void PresentationLayer::drawLogin()
 {
+		
+	DrawRectangleRounded(Rectangle{ GetScreenWidth() / 2.f - 1300 / 2, 50, 1300, GetScreenHeight() - 100.f}, 0.2, 0, SKYBLUE);
+	//SUBMIT BUTTON
+	submitButton.x = GetScreenWidth() / 2.f - submitButton.width / 2;
+	DrawRectangleRounded(submitButton, 0.2, 0, DARKGRAY);
+		if(CheckCollisionPointRec(mousePoint, submitButton)) DrawRectangleRounded(submitButton, 0.2, 0, GRAY);
+	DrawText("Submit", submitButton.x + submitButton.width / 3.5,submitButton.y + 25, 30, BLACK);
+	
+	//validate
+	if (isClicked(mousePoint, submitButton))
+	{
+		if (data->select(username, password))
+		{
+			direction = MENU;
+		}
+	}
+
+	for (auto&[name, field] : inputFields)
+	{
+		field.second.x = GetScreenWidth() / 2.f - field.second.width / 2;
+		DrawText(name.c_str(), field.second.x, field.second.y - 30, 30, DARKGRAY);
+		DrawRectangleRounded(field.second, 0.2, 0, DARKGRAY);
+		if(CheckCollisionPointRec(mousePoint, field.second)) DrawRectangleRounded(field.second, 0.2, 0, GRAY);
+
+		//check
+		
+		if(!field.first) field.first = isClicked(mousePoint, field.second);
+
+		if ( field.first && name == "Username") {
+			getUserName(username, letterCountUsername);
+			field.first = !isUnfocusedClick(mousePoint, field.second);
+		}else if (field.first && name == "Password") {
+			getPass(Hiddenpassword, letterCountPassword);
+			field.first = !isUnfocusedClick(mousePoint, field.second);
+		}
+
+		if (name == "Username") {
+			DrawText(username, field.second.x + 20, field.second.y+20, 30, BLACK);
+		}
+		else if (name == "Password") {
+			DrawText(Hiddenpassword, field.second.x + 20, field.second.y+20, 30, BLACK);
+		}
+	}
 	
 }
 
 void PresentationLayer::drawMenu()
 {
-	
 	DrawRectangleRounded(Rectangle{ 20, 50, 250, GetScreenHeight() - 100.f}, 0.2, 0, MENU_ADMIN);
 	DrawRectangleRounded(Rectangle{ 550, 50, 1300, GetScreenHeight() - 100.f}, 0.2, 0, MENU_ADMIN);
 	for (auto& [name, rect] : menuFields)
