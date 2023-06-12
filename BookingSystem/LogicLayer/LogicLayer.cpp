@@ -2,7 +2,7 @@
 #include "LogicLayer.hpp"
 LogicLayer::LogicLayer()
 {
-	data = Data::getInstance();
+	//data = Data::getInstance();
 	inputFields = {
 		{
 				"Username", {0, Rectangle{0, 500, 400, 75}},
@@ -12,6 +12,21 @@ LogicLayer::LogicLayer()
 		}
 	};
 	submitButton = Rectangle{ 0, 800, 200, 75 };
+
+	filmCard = {
+		{"Filname", { {Texture2D(), 0}, Rectangle()}},
+		{"Filname2", { {Texture2D(), 0}, Rectangle()}},
+		{"Filname3", { {Texture2D(), 0}, Rectangle()}},
+		{"Filname4", { {Texture2D(), 0}, Rectangle()}}
+	};
+	for (auto& [key, rect] : filmCard)
+	{
+		static int i = 1;
+		rect.second = Rectangle{ 1500, (90.f + 75) * i, 200, 500};
+		i++;
+	}
+
+
 	menuFields = {
 
 		{"City", {{Rectangle(), 0}, {Rectangle(), Rectangle()}} },

@@ -15,6 +15,10 @@ protected:
 	//bool validate(std::string username, std::string password);
 
 	
+	std::unordered_map<std::string,
+		std::pair<
+			std::pair<Texture2D, bool>, Rectangle>
+	> filmCard;
 
 	std::unordered_map<std::string,
 		std::pair<
