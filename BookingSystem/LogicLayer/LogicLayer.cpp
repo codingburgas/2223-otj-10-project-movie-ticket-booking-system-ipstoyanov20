@@ -2,6 +2,9 @@
 #include "LogicLayer.hpp"
 LogicLayer::LogicLayer()
 {
+	InitWindow(0, 0, "MovieBookingSystem");
+	SetTargetFPS(60);
+	ToggleFullscreen();
 	//data = Data::getInstance();
 	inputFields = {
 		{
@@ -11,19 +14,34 @@ LogicLayer::LogicLayer()
 				"Password", {0, Rectangle{ 0, 650, 400, 75 }}
 		}
 	};
-	submitButton = Rectangle{ 0, 800, 200, 75 };
+	submitButton = Rectangle{ GetScreenWidth() / 2.f - submitButton.width / 2, 800, 200, 75 };
 
 	filmCard = {
-		{"Filname", { {Texture2D(), 0}, Rectangle()}},
-		{"Filname2", { {Texture2D(), 0}, Rectangle()}},
-		{"Filname3", { {Texture2D(), 0}, Rectangle()}},
-		{"Filname4", { {Texture2D(), 0}, Rectangle()}}
+		{"FastX", { {Texture2D(), {0,Rectangle()}}, Rectangle()}},
+		{"Name", { {Texture2D(), {0,Rectangle()}}, Rectangle()}},
+		{"Filname2", { {Texture2D(), {0,Rectangle()}}, Rectangle()}},
+		{"Filname3", { {Texture2D(), {0,Rectangle()}}, Rectangle()}},
 	};
 	for (auto& [key, rect] : filmCard)
 	{
-		static int i = 1;
-		rect.second = Rectangle{ 1500, (90.f + 75) * i, 200, 500};
+
+		static int i = 0;
+
+		static int right = 0;
+		static int down = 0;
+
+			rect.second = Rectangle{ 900.f + right, 100.f + down, 200, 250};
+			rect.first.second.second = Rectangle{ 0, 0, 200, 250};
+
+			rect.first.first = LoadTexture("../assests/fast.png");
+
+			rect.first.first.width = rect.second.width;
+			rect.first.first.height = rect.second.height;
 		i++;
+
+		std::cout << "Fourth " << rect.second.x;
+		if (i % 2 == 0 && i > 0) { right += 210, down = 0; }
+		else { down += 280; }
 	}
 
 
@@ -33,7 +51,6 @@ LogicLayer::LogicLayer()
 		{"Cinema", {{Rectangle(), 0}, {Rectangle(), Rectangle()}}},
 		{"Hall", {{Rectangle(), 0}, {Rectangle(), Rectangle()}}},
 		{"Time", {{Rectangle(), 0}, {Rectangle(), Rectangle()}}},
-		{"Film", {{Rectangle(), 0}, {Rectangle(), Rectangle()}}},
 	};
 	for (auto& [key, rect] : menuFields)
 	{
