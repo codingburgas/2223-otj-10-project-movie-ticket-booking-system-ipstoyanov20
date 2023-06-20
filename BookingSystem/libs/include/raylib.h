@@ -184,6 +184,7 @@
 //CUSTOM COLORS
 #define BACKGROUND_ADMIN   CLITERAL(Color){34, 40, 49, 255}  
 #define MENU_ADMIN   CLITERAL(Color){255, 211, 105, 255}   
+#define MENU_ADMIN_HOVER   CLITERAL(Color){255, 211, 141, 255}   
 #define MENU_TEXT_FIELDS   CLITERAL(Color){34, 40, 49, 255}   
 #define MENU_TEXT_FIELDS_HOVER  CLITERAL(Color){57, 62, 70, 255}
 //----------------------------------------------------------------------------------

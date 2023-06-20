@@ -19,9 +19,9 @@ void PresentationLayer::createWindow()
 	
 	while (!WindowShouldClose())
 	{
-		 if (IsKeyPressed(KEY_A)) {
+		 if (isClicked(mousePoint , visitSiteButton)) {
 			MinimizeWindow();
-			OpenURL("https://www.youtube.com");
+			OpenURL("https://movie-system.vercel.app/");
 		 }
 
 		BeginDrawing();
@@ -81,8 +81,13 @@ void PresentationLayer::drawLogin()
 
 void PresentationLayer::drawMenu()
 {
-	DrawRectangleRounded(Rectangle{ 20, 50, 250, GetScreenHeight() - 100.f}, 0.2, 0, MENU_ADMIN);
+	DrawRectangleRounded(Rectangle{ 20, 160, 250, GetScreenHeight() - 250.f}, 0.2, 0, MENU_ADMIN);
 	DrawRectangleRounded(Rectangle{ 550, 50, 1300, GetScreenHeight() - 100.f}, 0.2, 0, MENU_ADMIN);
+
+	DrawRectangleRounded(visitSiteButton, 0.2, 0, MENU_ADMIN);
+	if (CheckCollisionPointRec(mousePoint, visitSiteButton)) DrawRectangleRounded(visitSiteButton, 0.2, 0, MENU_ADMIN_HOVER);
+	DrawText("Sing up", visitSiteButton.x + visitSiteButton.width / 3.5, visitSiteButton.y + 25, 30, BLACK);
+
 	for (auto& [name, rect] : menuFields)
 	{
 		if (isClicked(mousePoint, rect.first.first) || rect.first.second)

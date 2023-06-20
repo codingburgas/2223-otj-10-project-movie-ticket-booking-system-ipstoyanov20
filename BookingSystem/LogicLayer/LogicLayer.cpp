@@ -16,6 +16,8 @@ LogicLayer::LogicLayer()
 	};
 	submitButton = Rectangle{ GetScreenWidth() / 2.f - submitButton.width / 2, 800, 200, 75 };
 
+	visitSiteButton = Rectangle{ 30, 50, 225, 75 };
+
 	filmCard = {
 		{"FastX", { {Texture2D(), {0,Rectangle()}}, Rectangle()}},
 		{"Name", { {Texture2D(), {0,Rectangle()}}, Rectangle()}},
