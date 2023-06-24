@@ -10,6 +10,7 @@ public:
 private:
 	void drawLogin();
 	void drawMenu();
+	void drawSingInButton();
 
 	std::vector<std::function<void(PresentationLayer*)>> functions;
 };

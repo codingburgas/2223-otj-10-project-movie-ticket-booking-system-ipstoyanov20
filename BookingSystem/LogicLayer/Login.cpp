@@ -1,6 +1,16 @@
 #include "pch.h"
 #include "Login.hpp"
 
+//Login::Login()
+//{
+//	icon = LoadTexture("../assests/cinemaIcon.png");
+//}
+//	
+//Login::~Login()
+//{
+//	UnloadTexture(icon);
+//}
+
 void Login::getUserName(char input[MAX_INPUT], int& letterCount)
 {
 	

@@ -14,15 +14,23 @@ PresentationLayer::~PresentationLayer()
 {
 }
 
+void PresentationLayer::drawSingInButton()
+{
+	DrawRectangleRounded(visitSiteButton, 0.2, 0, MENU_ADMIN);
+	if (CheckCollisionPointRec(mousePoint, visitSiteButton)) DrawRectangleRounded(visitSiteButton, 0.2, 0, MENU_ADMIN_HOVER);
+
+	DrawText("Sing up", visitSiteButton.x + visitSiteButton.width / 3.5, visitSiteButton.y + 25, 30, BLACK);
+	if (isClicked(mousePoint, visitSiteButton)) {
+		MinimizeWindow();
+		OpenURL("https://movie-system.vercel.app/");
+	}
+}
+
 void PresentationLayer::createWindow()
 {
 	
 	while (!WindowShouldClose())
 	{
-		 if (isClicked(mousePoint , visitSiteButton)) {
-			MinimizeWindow();
-			OpenURL("https://movie-system.vercel.app/");
-		 }
 
 		BeginDrawing();
 			ClearBackground(BACKGROUND_ADMIN);
@@ -35,27 +43,34 @@ void PresentationLayer::createWindow()
 void PresentationLayer::drawLogin()
 {
 		
-	DrawRectangleRounded(Rectangle{ GetScreenWidth() / 2.f - 1300 / 2, 50, 1300, GetScreenHeight() - 100.f}, 0.2, 0, SKYBLUE);
+	DrawRectangleRounded(Rectangle{ GetScreenWidth() / 2.f - 1300 / 2, 50, 1300, GetScreenHeight() - 100.f}, 0.2, 0, MENU_ADMIN);
+	DrawTexture(icon, 850, 200, WHITE);
+	drawSingInButton();
 	//SUBMIT BUTTON
-	DrawRectangleRounded(submitButton, 0.2, 0, DARKGRAY);
-		if(CheckCollisionPointRec(mousePoint, submitButton)) DrawRectangleRounded(submitButton, 0.2, 0, GRAY);
-	DrawText("Submit", submitButton.x + submitButton.width / 3.5,submitButton.y + 25, 30, BLACK);
+	DrawRectangleRounded(submitButton, 0.2, 0, MENU_TEXT_FIELDS);
+		if(CheckCollisionPointRec(mousePoint, submitButton)) DrawRectangleRounded(submitButton, 0.2, 0, MENU_TEXT_FIELDS_HOVER);
+	DrawText("Submit", submitButton.x + submitButton.width / 3.5,submitButton.y + 25, 30, WHITE);
 	
-	//validate
-	/*if (isClicked(mousePoint, submitButton))
-	{
-		if (data->select(username, password))
+	for (auto& [label, boolean] : incorrectInputLabel) {
+		if (boolean)	 DrawText(label.c_str(),850, 750, 30, Fade(RED, 0.5));
+
+
+		if (isClicked(mousePoint, submitButton))
 		{
-			direction = MENU;
+			boolean = !data->select(username, password);
+			if (!boolean)
+			{
+				direction = MENU;
+			}
 		}
-	}*/
+	}
 
 	for (auto&[name, field] : inputFields)
 	{
 		field.second.x = GetScreenWidth() / 2.f - field.second.width / 2;
-		DrawText(name.c_str(), field.second.x, field.second.y - 30, 30, DARKGRAY);
-		DrawRectangleRounded(field.second, 0.2, 0, DARKGRAY);
-		if(CheckCollisionPointRec(mousePoint, field.second)) DrawRectangleRounded(field.second, 0.2, 0, GRAY);
+		DrawText(name.c_str(), field.second.x, field.second.y - 30, 30, MENU_TEXT_FIELDS);
+		DrawRectangleRounded(field.second, 0.2, 0, MENU_TEXT_FIELDS);
+		if(CheckCollisionPointRec(mousePoint, field.second)) DrawRectangleRounded(field.second, 0.2, 0, MENU_TEXT_FIELDS_HOVER);
 
 		//check
 		
@@ -68,12 +83,11 @@ void PresentationLayer::drawLogin()
 			getPass(Hiddenpassword, letterCountPassword);
 			field.first = !isUnfocusedClick(mousePoint, field.second);
 		}
-
 		if (name == "Username") {
-			DrawText(username, field.second.x + 20, field.second.y+20, 30, BLACK);
+			DrawText(username, field.second.x + 20, field.second.y+20, 30, WHITE);
 		}
 		else if (name == "Password") {
-			DrawText(Hiddenpassword, field.second.x + 20, field.second.y+20, 30, BLACK);
+			DrawText(Hiddenpassword, field.second.x + 20, field.second.y+20, 30,WHITE);
 		}
 	}
 	
@@ -81,12 +95,13 @@ void PresentationLayer::drawLogin()
 
 void PresentationLayer::drawMenu()
 {
-	DrawRectangleRounded(Rectangle{ 20, 160, 250, GetScreenHeight() - 250.f}, 0.2, 0, MENU_ADMIN);
+	DrawRectangleRounded(Rectangle{ 20, 180, 300, GetScreenHeight() - 250.f}, 0.2, 0, MENU_ADMIN);
 	DrawRectangleRounded(Rectangle{ 550, 50, 1300, GetScreenHeight() - 100.f}, 0.2, 0, MENU_ADMIN);
 
-	DrawRectangleRounded(visitSiteButton, 0.2, 0, MENU_ADMIN);
-	if (CheckCollisionPointRec(mousePoint, visitSiteButton)) DrawRectangleRounded(visitSiteButton, 0.2, 0, MENU_ADMIN_HOVER);
-	DrawText("Sing up", visitSiteButton.x + visitSiteButton.width / 3.5, visitSiteButton.y + 25, 30, BLACK);
+	DrawTexture(avatar, 100, 10, WHITE);
+
+	DrawText("Welcome, ", 50, 130, 30, WHITE);
+	DrawText(username, 200, 130, 30, WHITE);
 
 	for (auto& [name, rect] : menuFields)
 	{

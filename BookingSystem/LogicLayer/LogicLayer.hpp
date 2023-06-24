@@ -15,6 +15,7 @@ protected:
 	//bool validate(std::string username, std::string password);
 	
 	Rectangle visitSiteButton;
+	Texture2D avatar;
 	
 	std::unordered_map 
 	< 

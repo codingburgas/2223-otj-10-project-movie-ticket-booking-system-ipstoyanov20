@@ -4,8 +4,8 @@ LogicLayer::LogicLayer()
 {
 	InitWindow(0, 0, "MovieBookingSystem");
 	SetTargetFPS(60);
-	ToggleFullscreen();
-	//data = Data::getInstance();
+	//ToggleFullscreen();
+	data = Data::getInstance();
 	inputFields = {
 		{
 				"Username", {0, Rectangle{0, 500, 400, 75}},
@@ -17,6 +17,14 @@ LogicLayer::LogicLayer()
 	submitButton = Rectangle{ GetScreenWidth() / 2.f - submitButton.width / 2, 800, 200, 75 };
 
 	visitSiteButton = Rectangle{ 30, 50, 225, 75 };
+
+	icon = LoadTexture("../assests/cinemaIcon.png");
+	icon.width = 200;
+	icon.height = 200;
+
+	avatar = LoadTexture("../assests/avatar.png");
+	avatar.width = 150;
+	avatar.height = 150;
 
 	filmCard = {
 		{"FastX", { {Texture2D(), {0,Rectangle()}}, Rectangle()}},
@@ -46,6 +54,10 @@ LogicLayer::LogicLayer()
 		else { down += 280; }
 	}
 
+	incorrectInputLabel = {
+		{"Incorrect try again", 0}
+	};
+	 
 
 	menuFields = {
 
@@ -56,9 +68,9 @@ LogicLayer::LogicLayer()
 	};
 	for (auto& [key, rect] : menuFields)
 	{
-		static int i = 1;
-		rect.first.first = Rectangle{ 40, (90.f + 75) * i, 200, 75 };
-		i++;
+		static int down = 0;
+		rect.first.first = Rectangle{ 60, 280.f + down, 200, 75 };
+		down += 180;
 	}
 	
 

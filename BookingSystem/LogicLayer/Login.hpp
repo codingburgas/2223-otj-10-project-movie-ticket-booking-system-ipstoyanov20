@@ -4,7 +4,8 @@
 class Login
 {
 	public:
-		
+		/*Login();
+		~Login();*/
 		// variables for username and password (vectors of chars) and ractangles for login form (userbname and password fields) also title for form and labels for input fields
 	protected:
 		char username[MAX_INPUT + 1] = "\0";
@@ -19,7 +20,11 @@ class Login
 
 		std::unordered_map<std::string, std::pair<bool, Rectangle>> inputFields;
 
+		std::unordered_map<std::string, bool> incorrectInputLabel;
+
 		Rectangle submitButton;
+
+		Texture2D icon;
 		
 
 };

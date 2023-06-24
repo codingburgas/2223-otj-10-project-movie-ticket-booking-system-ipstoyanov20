@@ -65,8 +65,7 @@ Data* Data::getInstance()
 
 Data::Data()
 {
-
-        conn_.connect(NANODBC_TEXT("Driver={ODBC Driver 17 for SQL Server};Server=movie-system.database.windows.net;Database=system;Uid=ipstoyanov20;Pwd={Qwer1234};Encrypt=yes;"));
+    conn_.connect(NANODBC_TEXT("Driver={ODBC Driver 17 for SQL Server};Server=movie-app.database.windows.net;Database=app;Uid=ipstoyanov20;Pwd={Qwer1234};Encrypt=yes;"));
 }
 
 bool Data::select(std::string username, std::string password)
