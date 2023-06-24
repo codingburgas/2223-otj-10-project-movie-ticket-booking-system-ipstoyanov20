@@ -31,11 +31,23 @@ protected:
 	> filmCard;
 
 	std::unordered_map<std::string,
-		std::pair<
-		std::pair<Rectangle, bool>, std::vector<Rectangle>
+		std::pair<std::pair<std::vector<std::string>, std::pair<int, bool>>, 
+			std::pair<
+				std::pair<Rectangle, bool>, std::vector<Rectangle>
+			>
 		>
 	> menuFields;
 
 	Vector2 mousePoint;
+
+	Rectangle seatsLeft[5][4];
+	Rectangle seatsRight[5][4];
+
+	std::vector< std::vector<bool>> SelectedSeatsLeft;
+	std::vector< std::vector<bool>> SelectedSeatsRight;
+
+	std::string seatNameFromClick;
+
+	Rectangle submitSeatsButton;
 };
 

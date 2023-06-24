@@ -5,6 +5,7 @@ class SceneManager
 	enum Scenes : int {
 		MENU,
 		LOGIN,
+		SEATS,
 	 } direction = MENU;
 	
 };

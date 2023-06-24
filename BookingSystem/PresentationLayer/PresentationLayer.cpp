@@ -7,6 +7,7 @@ PresentationLayer::PresentationLayer()
 	functions = {
 		[](PresentationLayer* obj) { obj->drawMenu(); },
 		[](PresentationLayer* obj) { obj->drawLogin(); },
+		[](PresentationLayer* obj) { obj->drawSeats(); }
 	};
 }
 
@@ -96,48 +97,55 @@ void PresentationLayer::drawLogin()
 void PresentationLayer::drawMenu()
 {
 	DrawRectangleRounded(Rectangle{ 20, 180, 300, GetScreenHeight() - 250.f}, 0.2, 0, MENU_ADMIN);
-	DrawRectangleRounded(Rectangle{ 550, 50, 1300, GetScreenHeight() - 100.f}, 0.2, 0, MENU_ADMIN);
+	DrawRectangleRounded(Rectangle{ 650, 180, 1000, GetScreenHeight() - 250.f}, 0.2, 0, MENU_ADMIN);
 
 	DrawTexture(avatar, 100, 10, WHITE);
 
 	DrawText("Welcome, ", 50, 130, 30, WHITE);
+	DrawText("Choose Film", 950, 250, 50, BLACK);
 	DrawText(username, 200, 130, 30, WHITE);
 
 	for (auto& [name, rect] : menuFields)
 	{
-		if (isClicked(mousePoint, rect.first.first) || rect.first.second)
+		if (isClicked(mousePoint, rect.second.first.first) || rect.second.first.second)
 		{
 
 			int i = 0;
-			for (auto& dropDownRect : rect.second)
+			for (auto& dropDownRect : rect.second.second)
 			{
-				dropDownRect = Rectangle{ rect.first.first.x + 250,rect.first.first.y + i * (rect.first.first.width / 2.5f),rect.first.first.width,rect.first.first.height };
+				dropDownRect = Rectangle{ rect.second.first.first.x + 250,rect.second.first.first.y + i * (rect.second.first.first.width / 2.5f),rect.second.first.first.width,rect.second.first.first.height };
 				
-				rect.first.second = !isClicked(mousePoint, dropDownRect);
+				rect.second.first.second = !isClicked(mousePoint, dropDownRect);
 
-				if (!rect.first.second) break;
+				if (!rect.second.first.second)
+				{
+					rect.first.second.first = i;
+					rect.first.second.second = 1;
+					break;
+				}
 
 				i++;
 
 			}
 			i = 0;
-			for (auto& dropDownRect : rect.second)
+			for (auto& dropDownRect : rect.second.second)
 			{
-				
-				DrawRectangleRounded(dropDownRect, 0.2, 0, MENU_TEXT_FIELDS_HOVER);
-				i++;
+				(i == rect.first.second.first && rect.first.second.second) ? DrawRectangleRounded(dropDownRect, 0.2, 0, BLACK) :
+					DrawRectangleRounded(dropDownRect, 0.2, 0, MENU_TEXT_FIELDS_HOVER);
 
-				DrawTextEx(Font(), (name + std::to_string(i)).c_str(), Vector2{dropDownRect.x + dropDownRect.width / 2.f - (20 / 2 + 3 * name.size() + 1), dropDownRect.y + dropDownRect.height / 2.f - (20 / 2)}, 20, 3, WHITE);
+				 
+				DrawTextEx(Font(), rect.first.first[i].c_str(), Vector2{dropDownRect.x + dropDownRect.width / 2.f - (rect.first.first[i].size() / 3.5f * 20), dropDownRect.y + dropDownRect.height / 2.f - (20 / 2)}, 20, 3, WHITE);
+				i++;
 			}
 		}
-		if (CheckCollisionPointRec(mousePoint, rect.first.first))
+		if (CheckCollisionPointRec(mousePoint, rect.second.first.first))
 		{
-			DrawRectangleRounded(rect.first.first, 0.2, 0, MENU_TEXT_FIELDS_HOVER);
+			DrawRectangleRounded(rect.second.first.first, 0.2, 0, MENU_TEXT_FIELDS_HOVER);
 		}
 		else
-			DrawRectangleRounded(rect.first.first, 0.2, 0, MENU_TEXT_FIELDS);
-
-		DrawTextEx(Font(), name.c_str(), Vector2{ rect.first.first.x + rect.first.first.width / 2.f - (20 / 2 + 3 * name.size()), rect.first.first.y + rect.first.first.height / 2.f - (20 / 2)}, 20, 3, WHITE);
+			DrawRectangleRounded(rect.second.first.first, 0.2, 0, MENU_TEXT_FIELDS);
+		
+		DrawTextEx(Font(), name.c_str(), Vector2{ rect.second.first.first.x + rect.second.first.first.width / 2.f - (name.size() / 3.5f * 20), rect.second.first.first.y + rect.second.first.first.height / 2.f - 20 / 2}, 20, 3, WHITE);
 	}
 	////film
 	for (auto& [name, rect] : filmCard)
@@ -145,6 +153,8 @@ void PresentationLayer::drawMenu()
 		DrawTexturePro(rect.first.first, rect.first.second.second, rect.second, {0, 0}, 0,  WHITE);
 		if (isClicked(mousePoint, rect.second) || rect.first.second.first)
 		{
+			seatNameFromClick = name;
+			direction = SEATS;
 			//DrawTextEx(Font(), (name + std::to_string(i)).c_str(), Vector2{ rect.second.x + rect.second.width / 2.f - (20 / 2 + 3 * name.size() + 1), dropDownRect.y + dropDownRect.height / 2.f - (20 / 2) }, 20, 3, WHITE);
 		}
 		if (CheckCollisionPointRec(mousePoint, rect.second))
@@ -158,6 +168,88 @@ void PresentationLayer::drawMenu()
 		//DrawTextureRec(rect.first.first, rect.second, Vector2{rect.second.x, rect.second.y},BLANK);
 	}
 
+}
+
+void PresentationLayer::drawSeats()
+{
+	DrawRectangleRounded(submitSeatsButton, 0.2, 0, MENU_ADMIN);
+	if (CheckCollisionPointRec(mousePoint, submitSeatsButton)) DrawRectangleRounded(submitSeatsButton, 0.2, 0, MENU_ADMIN_HOVER);
+	DrawText("Submit", submitSeatsButton.x + submitSeatsButton.width / 3.5, submitSeatsButton.y + 25, 30, BLACK);
+
+
+	//film poster
+	DrawTexture(filmCard[seatNameFromClick].first.first, GetScreenWidth() / 2 - filmCard[seatNameFromClick].first.first.width / 2, 50, WHITE);
+
+	//rect for seats
+	DrawRectangleRounded(Rectangle{ GetScreenWidth() / 2.f - 475, 400, 950, 550}, 0.1, 0, MENU_ADMIN);
+	//Rect for header text
+	DrawRectangleRounded(Rectangle{ GetScreenWidth() / 2.f - 400, 310, 800, 60}, 0.1, 0, MENU_ADMIN);
+
+	DrawText(("Choose seats for " + seatNameFromClick).c_str(), GetScreenWidth() / 2.f - (("Choose seat for " + seatNameFromClick).size() / 3.5 * 40), 320, 40, BLACK);
+
+	for (int rows = 0; rows < sizeof(seatsLeft) / sizeof(seatsLeft[0]); rows++)
+	{
+
+		for (int cols = 0; cols < sizeof(seatsLeft[rows]) / sizeof(seatsLeft[rows][0]); cols++)
+		{
+			if (isClicked(mousePoint, seatsLeft[rows][cols]) )
+			{
+				SelectedSeatsLeft[rows][cols] = 1;
+				std::cout << SelectedSeatsLeft[rows][cols];
+			}
+			CheckCollisionPointRec(mousePoint, seatsLeft[rows][cols]) ? DrawRectangleRounded(seatsLeft[rows][cols], 0.2, 0, MENU_TEXT_FIELDS_HOVER) : DrawRectangleRounded(seatsLeft[rows][cols], 0.2, 0, BLACK);
+			(SelectedSeatsLeft[rows][cols]) ? DrawRectangleRounded(seatsLeft[rows][cols], 0.2, 0, MENU_ADMIN_HOVER) : DrawRectangleRounded(seatsLeft[rows][cols], 0.2, 0, BLACK);
+			DrawText(std::to_string(cols + 1).c_str(), seatsLeft[rows][cols].x + 30, seatsLeft[rows][cols].y + 30, 15, WHITE);
+		}
+	}
+	
+	for (int rows = 0; rows < sizeof(seatsRight) / sizeof(seatsRight[0]); rows++)
+	{
+
+		for (int cols = 0; cols < sizeof(seatsRight[rows]) / sizeof(seatsRight[rows][0]); cols++)
+		{
+
+			CheckCollisionPointRec(mousePoint, seatsRight[rows][cols]) ? DrawRectangleRounded(seatsRight[rows][cols], 0.2, 0, MENU_TEXT_FIELDS_HOVER) : DrawRectangleRounded(seatsRight[rows][cols], 0.2, 0, BLACK);
+			DrawText(std::to_string(cols + 5).c_str(), seatsRight[rows][cols].x + 30, seatsRight[rows][cols].y + 30, 15, WHITE);
+
+		}
+	}
+		//if (isClicked(mousePoint, seat) || rect.second.first.second)
+		//{
+
+		//	int i = 0;
+		//	for (auto& dropDownRect : rect.second.second)
+		//	{
+		//		dropDownRect = Rectangle{ rect.second.first.first.x + 250,rect.second.first.first.y + i * (rect.second.first.first.width / 2.5f),rect.second.first.first.width,rect.second.first.first.height };
+		//		
+		//		rect.second.first.second = !isClicked(mousePoint, dropDownRect);
+
+		//		if (!rect.second.first.second)
+		//		{
+		//			rect.first.second.first = i;
+		//			rect.first.second.second = 1;
+		//			break;
+		//		}
+
+		//		i++;
+
+		//	}
+		//	i = 0;
+		//	for (auto& dropDownRect : rect.second.second)
+		//	{
+		//		(i == rect.first.second.first && rect.first.second.second) ? DrawRectangleRounded(dropDownRect, 0.2, 0, BLACK) :
+		//			DrawRectangleRounded(dropDownRect, 0.2, 0, MENU_TEXT_FIELDS_HOVER);
+
+		//		 
+		//		DrawTextEx(Font(), rect.first.first[i].c_str(), Vector2{dropDownRect.x + dropDownRect.width / 2.f - (20 / 2 + 3 * rect.first.first[i].size()), dropDownRect.y + dropDownRect.height / 2.f - (20 / 2)}, 20, 3, WHITE);
+		//		i++;
+		//	}
+		//}
+		//if (CheckCollisionPointRec(mousePoint, rect.second.first.first))
+		//{
+		//	DrawRectangleRounded(rect.second)
+		//}
+	
 }
 
 void PresentationLayer::closeWindow()
