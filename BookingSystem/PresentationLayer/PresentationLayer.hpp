@@ -12,6 +12,7 @@ private:
 	void drawMenu();
 	void drawSeats();
 	void drawSingInButton();
+	void drawTicket();
 
 	std::vector<std::function<void(PresentationLayer*)>> functions;
 };

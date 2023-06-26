@@ -49,5 +49,8 @@ protected:
 	std::string seatNameFromClick;
 
 	Rectangle submitSeatsButton;
+
+	Rectangle previousButton;
+	Rectangle nextButton;
 };
 

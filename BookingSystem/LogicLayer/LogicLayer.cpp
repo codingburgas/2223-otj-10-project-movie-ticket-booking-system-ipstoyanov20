@@ -36,11 +36,16 @@ LogicLayer::LogicLayer()
 	avatar.height = 150;
 
 	filmCard = {
-		{"Fast X", { {LoadTexture("../assests/fast.png") , {0,Rectangle()}}, Rectangle()}},
-		{"Transformers", { {LoadTexture("../assests/trans.png") , {0,Rectangle()}}, Rectangle()}},
-		{"Flash", { {LoadTexture("../assests/flash.png"), {0,Rectangle()}}, Rectangle()}},
-		{"Elements", { {LoadTexture("../assests/elements.png"), {0,Rectangle()}}, Rectangle()}},
+		{"Fast X", { {LoadTexture("../assests/fast.png") , {false,Rectangle()}}, Rectangle()}},
+		{"Transformers", { {LoadTexture("../assests/trans.png") , {false,Rectangle()}}, Rectangle()}},
+		{"Flash", { {LoadTexture("../assests/flash.png"), {false,Rectangle()}}, Rectangle()}},
+		{"Elements", { {LoadTexture("../assests/elements.png"), {false,Rectangle()}}, Rectangle()}},
 	};
+
+	previousButton = Rectangle{ 30, 50, 225, 75 };
+
+	nextButton = Rectangle{ 980, 225, 225, 75 };
+
 	for (auto& [key, rect] : filmCard)
 	{
 

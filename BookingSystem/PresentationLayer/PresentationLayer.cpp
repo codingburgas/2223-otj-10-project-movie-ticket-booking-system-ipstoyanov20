@@ -5,9 +5,10 @@ PresentationLayer::PresentationLayer()
 {
 
 	functions = {
-		[](PresentationLayer* obj) { obj->drawMenu(); },
 		[](PresentationLayer* obj) { obj->drawLogin(); },
-		[](PresentationLayer* obj) { obj->drawSeats(); }
+		[](PresentationLayer* obj) { obj->drawMenu(); },
+		[](PresentationLayer* obj) { obj->drawSeats(); },
+		[](PresentationLayer* obj) { obj->drawTicket(); }
 	};
 }
 
@@ -150,30 +151,31 @@ void PresentationLayer::drawMenu()
 	////film
 	for (auto& [name, rect] : filmCard)
 	{
-		DrawTexturePro(rect.first.first, rect.first.second.second, rect.second, {0, 0}, 0,  WHITE);
+		DrawTexturePro(rect.first.first, rect.first.second.second, rect.second, { 0, 0 }, 0, WHITE);
 		if (isClicked(mousePoint, rect.second) || rect.first.second.first)
 		{
 			seatNameFromClick = name;
 			direction = SEATS;
-			//DrawTextEx(Font(), (name + std::to_string(i)).c_str(), Vector2{ rect.second.x + rect.second.width / 2.f - (20 / 2 + 3 * name.size() + 1), dropDownRect.y + dropDownRect.height / 2.f - (20 / 2) }, 20, 3, WHITE);
 		}
+			
 		if (CheckCollisionPointRec(mousePoint, rect.second))
 		{
-			DrawTexturePro(rect.first.first, rect.first.second.second, rect.second, {0, 0}, 0, Fade(BLACK, 0.5));
+			DrawTexturePro(rect.first.first, rect.first.second.second, rect.second, { 0, 0 }, 0, Fade(BLACK, 0.5));
 		}
-		//else
-			//DrawTextureRec(rect.first.first, rect.second, Vector2{rect.second.x, rect.second.y},BLANK);
-
-		//DrawTextEx(Font(), name.c_str(), Vector2{ rect.second.x + rect.second.width / 2.f - (20 / 2 + 3 * name.size()), rect.second.y + rect.second.height / 2.f - (20 / 2) }, 20, 3, WHITE);
-		//DrawTextureRec(rect.first.first, rect.second, Vector2{rect.second.x, rect.second.y},BLANK);
 	}
 
 }
 
 void PresentationLayer::drawSeats()
 {
+	//previusButton
+	DrawRectangleRounded(previousButton, 0.2, 0, RED);
+	if(isClicked(mousePoint, previousButton)) direction = Scenes(int(direction - 1));
+	DrawText("Previous", previousButton.x + 30, previousButton.y + 25, 30, BLACK);
+
 	DrawRectangleRounded(submitSeatsButton, 0.2, 0, MENU_ADMIN);
 	if (CheckCollisionPointRec(mousePoint, submitSeatsButton)) DrawRectangleRounded(submitSeatsButton, 0.2, 0, MENU_ADMIN_HOVER);
+	if (isClicked(mousePoint, submitSeatsButton)) direction = TICKET;
 	DrawText("Submit", submitSeatsButton.x + submitSeatsButton.width / 3.5, submitSeatsButton.y + 25, 30, BLACK);
 
 
@@ -214,42 +216,19 @@ void PresentationLayer::drawSeats()
 
 		}
 	}
-		//if (isClicked(mousePoint, seat) || rect.second.first.second)
-		//{
 
-		//	int i = 0;
-		//	for (auto& dropDownRect : rect.second.second)
-		//	{
-		//		dropDownRect = Rectangle{ rect.second.first.first.x + 250,rect.second.first.first.y + i * (rect.second.first.first.width / 2.5f),rect.second.first.first.width,rect.second.first.first.height };
-		//		
-		//		rect.second.first.second = !isClicked(mousePoint, dropDownRect);
-
-		//		if (!rect.second.first.second)
-		//		{
-		//			rect.first.second.first = i;
-		//			rect.first.second.second = 1;
-		//			break;
-		//		}
-
-		//		i++;
-
-		//	}
-		//	i = 0;
-		//	for (auto& dropDownRect : rect.second.second)
-		//	{
-		//		(i == rect.first.second.first && rect.first.second.second) ? DrawRectangleRounded(dropDownRect, 0.2, 0, BLACK) :
-		//			DrawRectangleRounded(dropDownRect, 0.2, 0, MENU_TEXT_FIELDS_HOVER);
-
-		//		 
-		//		DrawTextEx(Font(), rect.first.first[i].c_str(), Vector2{dropDownRect.x + dropDownRect.width / 2.f - (20 / 2 + 3 * rect.first.first[i].size()), dropDownRect.y + dropDownRect.height / 2.f - (20 / 2)}, 20, 3, WHITE);
-		//		i++;
-		//	}
-		//}
-		//if (CheckCollisionPointRec(mousePoint, rect.second.first.first))
-		//{
-		//	DrawRectangleRounded(rect.second)
-		//}
 	
+}
+void PresentationLayer::drawTicket()
+{
+	//previusButton
+	DrawRectangleRounded(previousButton, 0.2, 0, RED);
+	isClicked(mousePoint, previousButton) ? direction = Scenes(int(direction - 1)) : true;
+	DrawText("Previous", previousButton.x + 30, previousButton.y + 25, 30, BLACK);
+
+	DrawRectangleRounded(Rectangle{ 650, 180, 1000, GetScreenHeight() - 250.f }, 0.2, 0, MENU_ADMIN);
+	DrawText("", 500, 500, 30, BLACK);
+
 }
 
 void PresentationLayer::closeWindow()
