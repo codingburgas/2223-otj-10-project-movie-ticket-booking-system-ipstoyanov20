@@ -1,21 +1,12 @@
 #include "pch.h"
 #include "Login.hpp"
 
-//Login::Login()
-//{
-//	icon = LoadTexture("../assests/cinemaIcon.png");
-//}
-//	
-//Login::~Login()
-//{
-//	UnloadTexture(icon);
-//}
 
 void Login::getUserName(char input[MAX_INPUT], int& letterCount)
 {
 	
 	int key = GetCharPressed();
-	// Check if more characters have been pressed on the same frame
+	
 	while (key > 0)
 	{
 		if (key >= 32 && key <= 125 && letterCount < MAX_INPUT)
@@ -25,7 +16,7 @@ void Login::getUserName(char input[MAX_INPUT], int& letterCount)
 			letterCount++;
 		}
 
-		key = GetCharPressed();  // Check next character in the queue
+		key = GetCharPressed();  
 	}
 
 	if (IsKeyPressed(KEY_BACKSPACE))
@@ -39,7 +30,7 @@ void Login::getPass(char input[MAX_INPUT], int&letterCount)
 {
 
 	int key = GetCharPressed();
-	// Check if more characters have been pressed on the same frame
+	
 	while (key > 0)
 	{
 		if (key >= 32 && key <= 125 && letterCount < MAX_INPUT)
@@ -50,11 +41,12 @@ void Login::getPass(char input[MAX_INPUT], int&letterCount)
 			letterCount++;
 		}
 
-		key = GetCharPressed();  // Check next character in the queue
+		key = GetCharPressed();  
 	}
 
 	if (IsKeyPressed(KEY_BACKSPACE))
 	{
+		if(password.size() > 0) password.pop_back();
 		letterCount--;
 		if (letterCount < 0) letterCount = 0;
 		input[letterCount] = '\0';

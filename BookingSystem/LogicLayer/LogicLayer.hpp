@@ -10,13 +10,17 @@ public:
 
 	Data* data;
 protected:
+
+	//strings
+	std::string seatNameFromClick;
+
+	//booleans
+
+	bool quit = false;
 	bool isClicked(Vector2& mousePos, Rectangle& rect);
 	bool isUnfocusedClick(Vector2& mousePos, Rectangle& rect);
-	//bool validate(std::string username, std::string password);
-	
-	Rectangle visitSiteButton;
-	Texture2D avatar;
-	
+
+	//unorderd maps
 	std::unordered_map 
 	< 
 		std::string,
@@ -38,26 +42,28 @@ protected:
 		>
 	> menuFields;
 
-	Vector2 mousePoint;
+	std::unordered_map<std::string, std::string> ticketFields;
 
+	//Rectangles
+	Rectangle visitSiteButton;
 	Rectangle seatsLeft[5][4];
 	Rectangle seatsRight[5][4];
+	Rectangle submitSeatsButton;
+	Rectangle nextButton;
+	Rectangle previousButton;
+	Rectangle enjoy;
 
+	//Textures
+	Texture2D avatar;
+
+	//std::vectors
 	std::vector< std::vector<bool>> SelectedSeatsLeft;
 	std::vector< std::vector<bool>> SelectedSeatsRight;
 
-	std::string seatNameFromClick;
+	//Vector2
+	Vector2 mousePoint;
 
-	Rectangle submitSeatsButton;
 
-	Rectangle previousButton;
-	Rectangle nextButton;
-
-	Rectangle enjoy;
-
-	bool quit = false;
-
-	std::unordered_map<std::string, std::string> ticketFields;
 
 };
 

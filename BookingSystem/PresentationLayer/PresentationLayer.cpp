@@ -92,6 +92,7 @@ void PresentationLayer::drawLogin()
 			DrawText(Hiddenpassword, field.second.x + 20, field.second.y+20, 30,WHITE);
 		}
 	}
+	std::cout << username << "  " << password << "  " << std::endl;
 	
 }
 

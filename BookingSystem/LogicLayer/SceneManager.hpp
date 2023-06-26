@@ -7,7 +7,7 @@ class SceneManager
 		MENU,
 		SEATS,
 		TICKET,
-	 } direction = MENU;
+	 } direction = LOGIN;
 	
 };
 
