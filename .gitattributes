@@ -3,6 +3,7 @@
 ###############################################################################
 * text=auto
 docs/ linguist-vendored
+*h linguist-language=c++
 
 ###############################################################################
 # Set default behavior for command prompt diff.
