@@ -52,5 +52,12 @@ protected:
 
 	Rectangle previousButton;
 	Rectangle nextButton;
+
+	Rectangle enjoy;
+
+	bool quit = false;
+
+	std::unordered_map<std::string, std::string> ticketFields;
+
 };
 

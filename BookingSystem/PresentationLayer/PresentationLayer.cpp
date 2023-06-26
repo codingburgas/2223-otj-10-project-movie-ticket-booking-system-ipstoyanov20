@@ -31,7 +31,7 @@ void PresentationLayer::drawSingInButton()
 void PresentationLayer::createWindow()
 {
 	
-	while (!WindowShouldClose())
+	while (!WindowShouldClose() && !quit)
 	{
 
 		BeginDrawing();
@@ -120,6 +120,7 @@ void PresentationLayer::drawMenu()
 
 				if (!rect.second.first.second)
 				{
+					ticketFields[name] = rect.first.first[i];
 					rect.first.second.first = i;
 					rect.first.second.second = 1;
 					break;
@@ -168,10 +169,11 @@ void PresentationLayer::drawMenu()
 
 void PresentationLayer::drawSeats()
 {
-	//previusButton
-	DrawRectangleRounded(previousButton, 0.2, 0, RED);
-	if(isClicked(mousePoint, previousButton)) direction = Scenes(int(direction - 1));
-	DrawText("Previous", previousButton.x + 30, previousButton.y + 25, 30, BLACK);
+	//previous button
+	DrawRectangleRounded(previousButton, 0.2, 0, MENU_ADMIN);
+	if (CheckCollisionPointRec(mousePoint, previousButton)) DrawRectangleRounded(previousButton, 0.2, 0, MENU_ADMIN_HOVER);
+	isClicked(mousePoint, previousButton) ? direction = Scenes(int(direction - 1)) : true;
+	DrawText("Previous", previousButton.x + 45, previousButton.y + 25, 30, BLACK);
 
 	DrawRectangleRounded(submitSeatsButton, 0.2, 0, MENU_ADMIN);
 	if (CheckCollisionPointRec(mousePoint, submitSeatsButton)) DrawRectangleRounded(submitSeatsButton, 0.2, 0, MENU_ADMIN_HOVER);
@@ -197,10 +199,9 @@ void PresentationLayer::drawSeats()
 			if (isClicked(mousePoint, seatsLeft[rows][cols]) )
 			{
 				SelectedSeatsLeft[rows][cols] = 1;
-				std::cout << SelectedSeatsLeft[rows][cols];
 			}
 			CheckCollisionPointRec(mousePoint, seatsLeft[rows][cols]) ? DrawRectangleRounded(seatsLeft[rows][cols], 0.2, 0, MENU_TEXT_FIELDS_HOVER) : DrawRectangleRounded(seatsLeft[rows][cols], 0.2, 0, BLACK);
-			(SelectedSeatsLeft[rows][cols]) ? DrawRectangleRounded(seatsLeft[rows][cols], 0.2, 0, MENU_ADMIN_HOVER) : DrawRectangleRounded(seatsLeft[rows][cols], 0.2, 0, BLACK);
+			if(SelectedSeatsLeft[rows][cols]) DrawRectangleRounded(seatsLeft[rows][cols], 0.2, 0, MENU_ADMIN_HOVER);
 			DrawText(std::to_string(cols + 1).c_str(), seatsLeft[rows][cols].x + 30, seatsLeft[rows][cols].y + 30, 15, WHITE);
 		}
 	}
@@ -211,7 +212,12 @@ void PresentationLayer::drawSeats()
 		for (int cols = 0; cols < sizeof(seatsRight[rows]) / sizeof(seatsRight[rows][0]); cols++)
 		{
 
+			if (isClicked(mousePoint, seatsRight[rows][cols]))
+			{
+				SelectedSeatsRight[rows][cols] = 1;
+			}
 			CheckCollisionPointRec(mousePoint, seatsRight[rows][cols]) ? DrawRectangleRounded(seatsRight[rows][cols], 0.2, 0, MENU_TEXT_FIELDS_HOVER) : DrawRectangleRounded(seatsRight[rows][cols], 0.2, 0, BLACK);
+			if(SelectedSeatsRight[rows][cols]) DrawRectangleRounded(seatsRight[rows][cols], 0.2, 0, MENU_ADMIN_HOVER);
 			DrawText(std::to_string(cols + 5).c_str(), seatsRight[rows][cols].x + 30, seatsRight[rows][cols].y + 30, 15, WHITE);
 
 		}
@@ -221,13 +227,54 @@ void PresentationLayer::drawSeats()
 }
 void PresentationLayer::drawTicket()
 {
-	//previusButton
-	DrawRectangleRounded(previousButton, 0.2, 0, RED);
-	isClicked(mousePoint, previousButton) ? direction = Scenes(int(direction - 1)) : true;
-	DrawText("Previous", previousButton.x + 30, previousButton.y + 25, 30, BLACK);
+	
+	DrawRectangleRounded(Rectangle{ GetScreenWidth() / 2.f - 500, GetScreenHeight() / 2.f - 250, 1000, 500}, 0.2, 0, MENU_ADMIN);
+	DrawText("Your Ticket:", GetScreenWidth() / 2.f - 450, GetScreenHeight() / 2.f - 200, 40, BLACK);
 
-	DrawRectangleRounded(Rectangle{ 650, 180, 1000, GetScreenHeight() - 250.f }, 0.2, 0, MENU_ADMIN);
-	DrawText("", 500, 500, 30, BLACK);
+	DrawText(("Movie: " + seatNameFromClick).c_str(), GetScreenWidth() / 2.f - 450, GetScreenHeight() / 2.f - 100, 30, BLACK);
+	
+	int down = 0;
+	for (const auto& [name, value] : ticketFields)
+	{
+		DrawText((name + ": " + value).c_str(), GetScreenWidth() / 2.f - 450, GetScreenHeight() / 2.f - 50 + down, 30, BLACK);
+		down+= 50;
+	}
+	down = 0;
+	//draw which seats are selected
+	DrawText("Left part of seats: ", GetScreenWidth() / 2.f - 450, GetScreenHeight() / 2.f + 100, 30, BLACK);
+	for (int rows = 0; rows < sizeof(seatsLeft) / sizeof(seatsLeft[0]); rows++)
+	{
+		//std::cout << sizeof(seatsLeft) / sizeof(seatsLeft[0]) << std::endl;
+		for (int cols = 0; cols < sizeof(seatsLeft[rows]) / sizeof(seatsLeft[rows][0]); cols++)
+		{
+			
+			if (SelectedSeatsLeft[rows][cols])
+			{
+				DrawText(("row: " + std::to_string(rows + 1) + " seat: " + std::to_string(cols + 1) + " - ").c_str(), GetScreenWidth() / 2.f - 100 + down, GetScreenHeight() / 2.f + 100, 25, BLACK);
+				down += 210;
+			}
+			
+		}
+	}
+	down = 0;
+	DrawText("Right part of seats: ", GetScreenWidth() / 2.f - 450, GetScreenHeight() / 2.f + 150, 30, BLACK);
+	for (int rows = 0; rows < sizeof(seatsRight) / sizeof(seatsRight[0]); rows++)
+	{
+
+		for (int cols = 0; cols < sizeof(seatsRight[rows]) / sizeof(seatsRight[rows][0]); cols++)
+		{
+			
+			if (SelectedSeatsRight[rows][cols])
+			{
+				DrawText(("row: " + std::to_string(rows + 1) + " seat: " + std::to_string(cols + 5) + " - ").c_str(), GetScreenWidth() / 2.f - 100 + down, GetScreenHeight() / 2.f + 150, 25, BLACK);
+				down += 210;
+			}
+		}
+		
+	}
+	DrawRectangleRounded(enjoy, 0.2, 0, MENU_ADMIN);
+	if (isClicked(mousePoint, enjoy)) quit = 1;
+	DrawText("Enjoy", enjoy.x + 55, enjoy.y + 25, 30, BLACK);
 
 }
 

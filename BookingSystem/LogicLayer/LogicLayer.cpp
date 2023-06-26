@@ -97,6 +97,12 @@ LogicLayer::LogicLayer()
 		{"Incorrect try again", 0}
 	};
 	
+	ticketFields = {
+		{"City", "",},
+		{"Hall", "", },
+		{"Projections", "" }
+	};
+
 
 	menuFields = {
 		{"City", 
@@ -119,6 +125,7 @@ LogicLayer::LogicLayer()
 		rect.second.first.first = Rectangle{ 60, 280.f + down, 200, 75 };
 		down += 180;
 	}
+	enjoy = Rectangle{GetScreenWidth() / 2.f - 100, 900, 200, 75};
 
 }
 
