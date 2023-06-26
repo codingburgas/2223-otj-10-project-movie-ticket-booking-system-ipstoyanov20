@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_presentation_layer_8hpp" kind="file" language="C++">
+    <compoundname>PresentationLayer.hpp</compoundname>
+    <includes refid="pch_8h" local="yes">pch.h</includes>
+    <includedby refid="_presentation_layer_8cpp" local="yes">C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.cpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>../LogicLayer/LogicLayer.hpp</label>
+      </node>
+      <node id="1">
+        <label>C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp</label>
+        <link refid="_presentation_layer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pch.h</label>
+        <link refid="pch_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cstring</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>raylib.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_presentation_layer" prot="public">PresentationLayer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_presentation_layer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_presentation_layer" kindref="compound">PresentationLayer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>LogicLayer</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_presentation_layer" kindref="compound">PresentationLayer</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_presentation_layer" kindref="compound">~PresentationLayer</ref>();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createWindow();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>closeWindow();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawLogin();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawMenu();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawSeats();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawSingInButton();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawTicket();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::function&lt;void(<ref refid="class_presentation_layer" kindref="compound">PresentationLayer</ref>*)&gt;&gt;<sp/>functions;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp"/>
+  </compounddef>
+</doxygen>

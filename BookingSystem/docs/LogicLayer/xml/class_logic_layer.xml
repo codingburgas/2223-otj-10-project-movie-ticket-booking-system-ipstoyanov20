@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_logic_layer" kind="class" language="C++" prot="public">
+    <compoundname>LogicLayer</compoundname>
+    <basecompoundref refid="class_login" prot="public" virt="non-virtual">Login</basecompoundref>
+    <basecompoundref refid="class_scene_manager" prot="public" virt="non-virtual">SceneManager</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_logic_layer_1aa76a6e164d978b1bb707ed8e94c77cf8" prot="public" static="no" mutable="no">
+        <type>Data *</type>
+        <definition>Data* LogicLayer::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>LogicLayer::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="11" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_logic_layer_1adbbb0a0fe41f4712041d026d591692fb" prot="protected" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle LogicLayer::visitSiteButton</definition>
+        <argsstring></argsstring>
+        <name>visitSiteButton</name>
+        <qualifiedname>LogicLayer::visitSiteButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="17" column="11" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_layer_1a305efb033da7d99aa91f8bacefb09f9f" prot="protected" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D LogicLayer::avatar</definition>
+        <argsstring></argsstring>
+        <name>avatar</name>
+        <qualifiedname>LogicLayer::avatar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="18" column="11" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_layer_1a984036e41e134c4201c713b15cd259f6" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::pair&lt; std::pair&lt; Texture2D, std::pair&lt; bool, Rectangle &gt; &gt;, Rectangle &gt; &gt;</type>
+        <definition>std::unordered_map&lt; std::string, std::pair &lt; std::pair &lt; Texture2D, std::pair&lt;bool, Rectangle&gt; &gt;,Rectangle &gt; &gt; LogicLayer::filmCard</definition>
+        <argsstring></argsstring>
+        <name>filmCard</name>
+        <qualifiedname>LogicLayer::filmCard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="31" column="2" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_layer_1a79071028166bf2d551e57aa0fc8d22ad" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::pair&lt; std::pair&lt; std::vector&lt; std::string &gt;, std::pair&lt; int, bool &gt; &gt;, std::pair&lt; std::pair&lt; Rectangle, bool &gt;, std::vector&lt; Rectangle &gt; &gt; &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::pair&lt;std::pair&lt;std::vector&lt;std::string&gt;, std::pair&lt;int, bool&gt; &gt;, std::pair&lt; std::pair&lt;Rectangle, bool&gt;, std::vector&lt;Rectangle&gt; &gt; &gt; &gt; LogicLayer::menuFields</definition>
+        <argsstring></argsstring>
+        <name>menuFields</name>
+        <qualifiedname>LogicLayer::menuFields</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="39" column="2" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_layer_1a28c0a2f436654d64602021cc73f3f89f" prot="protected" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 LogicLayer::mousePoint</definition>
+        <argsstring></argsstring>
+        <name>mousePoint</name>
+        <qualifiedname>LogicLayer::mousePoint</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="41" column="9" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_layer_1a40cf87791b0661ac4c1179fee62a0aff" prot="protected" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle LogicLayer::seatsLeft[5][4]</definition>
+        <argsstring>[5][4]</argsstring>
+        <name>seatsLeft</name>
+        <qualifiedname>LogicLayer::seatsLeft</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="43" column="11" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_layer_1ab4a256bcf663c7debbfadf77684d07b0" prot="protected" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle LogicLayer::seatsRight[5][4]</definition>
+        <argsstring>[5][4]</argsstring>
+        <name>seatsRight</name>
+        <qualifiedname>LogicLayer::seatsRight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="44" column="11" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_layer_1a33620ad7f51319a5b178168a0586a6f8" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; bool &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;bool&gt; &gt; LogicLayer::SelectedSeatsLeft</definition>
+        <argsstring></argsstring>
+        <name>SelectedSeatsLeft</name>
+        <qualifiedname>LogicLayer::SelectedSeatsLeft</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="46" column="13" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_layer_1a357edc494cc9bdcd75f75befac656e32" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; bool &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;bool&gt; &gt; LogicLayer::SelectedSeatsRight</definition>
+        <argsstring></argsstring>
+        <name>SelectedSeatsRight</name>
+        <qualifiedname>LogicLayer::SelectedSeatsRight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="47" column="13" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_layer_1af4e3d4291ab6fea82cddd9ced67fc575" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string LogicLayer::seatNameFromClick</definition>
+        <argsstring></argsstring>
+        <name>seatNameFromClick</name>
+        <qualifiedname>LogicLayer::seatNameFromClick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="49" column="13" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_layer_1ad3c9c0b6052a512a08670b4fd76d0e07" prot="protected" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle LogicLayer::submitSeatsButton</definition>
+        <argsstring></argsstring>
+        <name>submitSeatsButton</name>
+        <qualifiedname>LogicLayer::submitSeatsButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="51" column="11" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_layer_1a29ad5c5080c7987d3628f0803dd5add0" prot="protected" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle LogicLayer::previousButton</definition>
+        <argsstring></argsstring>
+        <name>previousButton</name>
+        <qualifiedname>LogicLayer::previousButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="53" column="11" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_logic_layer_1a026301f415f4f8ef2430721e7ee7f4fa" prot="protected" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle LogicLayer::nextButton</definition>
+        <argsstring></argsstring>
+        <name>nextButton</name>
+        <qualifiedname>LogicLayer::nextButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="54" column="11" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_logic_layer_1a738a44870a101a4f032b0ca228e46a55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LogicLayer::LogicLayer</definition>
+        <argsstring>()</argsstring>
+        <name>LogicLayer</name>
+        <qualifiedname>LogicLayer::LogicLayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="8" column="1" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.cpp" bodystart="3" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_layer_1ae433e30f85b71be037754d016c769ce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LogicLayer::~LogicLayer</definition>
+        <argsstring>()</argsstring>
+        <name>~LogicLayer</name>
+        <qualifiedname>LogicLayer::~LogicLayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="9" column="1" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.cpp" bodystart="140" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_logic_layer_1ac27007e50775b946748ae77134e5e55f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogicLayer::isClicked</definition>
+        <argsstring>(Vector2 &amp;mousePos, Rectangle &amp;rect)</argsstring>
+        <name>isClicked</name>
+        <qualifiedname>LogicLayer::isClicked</qualifiedname>
+        <param>
+          <type>Vector2 &amp;</type>
+          <declname>mousePos</declname>
+        </param>
+        <param>
+          <type>Rectangle &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="13" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.cpp" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_logic_layer_1a9a7f95a20b27ef51ca16a742cda5345d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogicLayer::isUnfocusedClick</definition>
+        <argsstring>(Vector2 &amp;mousePos, Rectangle &amp;rect)</argsstring>
+        <name>isUnfocusedClick</name>
+        <qualifiedname>LogicLayer::isUnfocusedClick</qualifiedname>
+        <param>
+          <type>Vector2 &amp;</type>
+          <declname>mousePos</declname>
+        </param>
+        <param>
+          <type>Rectangle &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="14" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.cpp" bodystart="135" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>LogicLayer</label>
+        <link refid="class_logic_layer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Login</label>
+        <link refid="class_login"/>
+      </node>
+      <node id="3">
+        <label>SceneManager</label>
+        <link refid="class_scene_manager"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>LogicLayer</label>
+        <link refid="class_logic_layer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Login</label>
+        <link refid="class_login"/>
+      </node>
+      <node id="3">
+        <label>SceneManager</label>
+        <link refid="class_scene_manager"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" line="5" column="1" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp" bodystart="6" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_logic_layer_1a305efb033da7d99aa91f8bacefb09f9f" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>avatar</name></member>
+      <member refid="class_logic_layer_1aa76a6e164d978b1bb707ed8e94c77cf8" prot="public" virt="non-virtual"><scope>LogicLayer</scope><name>data</name></member>
+      <member refid="class_scene_manager_1abf673bb66a186511bb9adab0a69665ab" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>direction</name></member>
+      <member refid="class_logic_layer_1a984036e41e134c4201c713b15cd259f6" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>filmCard</name></member>
+      <member refid="class_login_1adf40aa5675d470470e4ac91bb3661e36" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>getPass</name></member>
+      <member refid="class_login_1a4688d1c227ef2da07043dd64d20aa3d9" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>getUserName</name></member>
+      <member refid="class_login_1a1aab35ce1272cf979426099ef1a218a0" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>Hiddenpassword</name></member>
+      <member refid="class_login_1a464f04027178ecfc458da5da2e394869" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>icon</name></member>
+      <member refid="class_login_1a598e45ac4efcfdeb8a7ac538dc23ac7d" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>incorrectInputLabel</name></member>
+      <member refid="class_login_1a8034953f1ca8dd2bc4e0d18a44e2ed43" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>inputFields</name></member>
+      <member refid="class_logic_layer_1ac27007e50775b946748ae77134e5e55f" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>isClicked</name></member>
+      <member refid="class_logic_layer_1a9a7f95a20b27ef51ca16a742cda5345d" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>isUnfocusedClick</name></member>
+      <member refid="class_login_1a2d1e800accc19e9c1e5b84c0c7b0eb7e" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>letterCountPassword</name></member>
+      <member refid="class_login_1a0693fb153c3ba72ff4cfa52589a828ce" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>letterCountUsername</name></member>
+      <member refid="class_logic_layer_1a738a44870a101a4f032b0ca228e46a55" prot="public" virt="non-virtual"><scope>LogicLayer</scope><name>LogicLayer</name></member>
+      <member refid="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9a72550b7fe89a1c393a6d087dba53888e" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>LOGIN</name></member>
+      <member refid="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9aebeeecc11278853621d4a21149bddc81" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>MENU</name></member>
+      <member refid="class_logic_layer_1a79071028166bf2d551e57aa0fc8d22ad" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>menuFields</name></member>
+      <member refid="class_logic_layer_1a28c0a2f436654d64602021cc73f3f89f" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>mousePoint</name></member>
+      <member refid="class_logic_layer_1a026301f415f4f8ef2430721e7ee7f4fa" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>nextButton</name></member>
+      <member refid="class_login_1ab8f20e3aa4dc960b679c4af578be7904" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>password</name></member>
+      <member refid="class_logic_layer_1a29ad5c5080c7987d3628f0803dd5add0" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>previousButton</name></member>
+      <member refid="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>Scenes</name></member>
+      <member refid="class_logic_layer_1af4e3d4291ab6fea82cddd9ced67fc575" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>seatNameFromClick</name></member>
+      <member refid="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9a9f55b0864bbb2ca75fdb35211f879a94" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>SEATS</name></member>
+      <member refid="class_logic_layer_1a40cf87791b0661ac4c1179fee62a0aff" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>seatsLeft</name></member>
+      <member refid="class_logic_layer_1ab4a256bcf663c7debbfadf77684d07b0" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>seatsRight</name></member>
+      <member refid="class_logic_layer_1a33620ad7f51319a5b178168a0586a6f8" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>SelectedSeatsLeft</name></member>
+      <member refid="class_logic_layer_1a357edc494cc9bdcd75f75befac656e32" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>SelectedSeatsRight</name></member>
+      <member refid="class_login_1a48290b46c5c8250864570134bb674432" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>submitButton</name></member>
+      <member refid="class_logic_layer_1ad3c9c0b6052a512a08670b4fd76d0e07" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>submitSeatsButton</name></member>
+      <member refid="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9ad7304fbeb39fdde6245f84f3fed2a13c" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>TICKET</name></member>
+      <member refid="class_login_1a0c3a1d8af3731f9f5b6dd61b91c1b408" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>username</name></member>
+      <member refid="class_logic_layer_1adbbb0a0fe41f4712041d026d591692fb" prot="protected" virt="non-virtual"><scope>LogicLayer</scope><name>visitSiteButton</name></member>
+      <member refid="class_logic_layer_1ae433e30f85b71be037754d016c769ce4" prot="public" virt="non-virtual"><scope>LogicLayer</scope><name>~LogicLayer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

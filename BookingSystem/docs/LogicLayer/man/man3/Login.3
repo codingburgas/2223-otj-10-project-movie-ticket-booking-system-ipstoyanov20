@@ -1,0 +1,55 @@
+.TH "Login" 3Version 1.0" "BookingSystem" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Login
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBLogicLayer\fP\&.
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgetUserName\fP (char input[MAX_INPUT], int &letterCount)"
+.br
+.ti -1c
+.RI "void \fBgetPass\fP (char input[MAX_INPUT], int &letterCount)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "char \fBusername\fP [MAX_INPUT+1] = '\\0'"
+.br
+.ti -1c
+.RI "char \fBHiddenpassword\fP [MAX_INPUT+1] = '\\0'"
+.br
+.ti -1c
+.RI "std::string \fBpassword\fP = ''"
+.br
+.ti -1c
+.RI "int \fBletterCountUsername\fP = 0"
+.br
+.ti -1c
+.RI "int \fBletterCountPassword\fP = 0"
+.br
+.ti -1c
+.RI "std::unordered_map< std::string, std::pair< bool, Rectangle > > \fBinputFields\fP"
+.br
+.ti -1c
+.RI "std::unordered_map< std::string, bool > \fBincorrectInputLabel\fP"
+.br
+.ti -1c
+.RI "Rectangle \fBsubmitButton\fP"
+.br
+.ti -1c
+.RI "Texture2D \fBicon\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BookingSystem from the source code\&.

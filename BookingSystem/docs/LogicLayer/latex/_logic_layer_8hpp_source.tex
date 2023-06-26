@@ -1,0 +1,62 @@
+\doxysection{Logic\+Layer.\+hpp}
+\hypertarget{_logic_layer_8hpp_source}{}\label{_logic_layer_8hpp_source}\index{C:/Users/Gamer/Desktop/2223-\/otj-\/10-\/project-\/movie-\/ticket-\/booking-\/system-\/ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp@{C:/Users/Gamer/Desktop/2223-\/otj-\/10-\/project-\/movie-\/ticket-\/booking-\/system-\/ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}pch.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Login.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}SceneManager.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_logic_layer}{LogicLayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_login}{Login}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scene_manager}{SceneManager}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_logic_layer}{LogicLayer}}();}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_logic_layer}{\string~LogicLayer}}();}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ Data*\ data;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ isClicked(Vector2\&\ mousePos,\ Rectangle\&\ rect);}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ isUnfocusedClick(Vector2\&\ mousePos,\ Rectangle\&\ rect);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//bool\ validate(std::string\ username,\ std::string\ password);}}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ Rectangle\ visitSiteButton;}
+\DoxyCodeLine{00018\ \ \ \ \ Texture2D\ avatar;}
+\DoxyCodeLine{00019\ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ std::unordered\_map\ }
+\DoxyCodeLine{00021\ \ \ \ \ <\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::string,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::pair\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ <}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::pair\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Texture2D,\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::pair<bool,\ Rectangle>\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ >,Rectangle\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ >}
+\DoxyCodeLine{00031\ \ \ \ \ >\ filmCard;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ std::unordered\_map<std::string,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::pair<std::pair<std::vector<std::string>,\ std::pair<int,\ bool>>,\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ std::pair<}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::pair<Rectangle,\ bool>,\ std::vector<Rectangle>}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ >}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ >}
+\DoxyCodeLine{00039\ \ \ \ \ >\ menuFields;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ Vector2\ mousePoint;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ Rectangle\ seatsLeft[5][4];}
+\DoxyCodeLine{00044\ \ \ \ \ Rectangle\ seatsRight[5][4];}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ std::vector<\ std::vector<bool>>\ SelectedSeatsLeft;}
+\DoxyCodeLine{00047\ \ \ \ \ std::vector<\ std::vector<bool>>\ SelectedSeatsRight;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ std::string\ seatNameFromClick;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ Rectangle\ submitSeatsButton;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ Rectangle\ previousButton;}
+\DoxyCodeLine{00054\ \ \ \ \ Rectangle\ nextButton;}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+
+\end{DoxyCode}

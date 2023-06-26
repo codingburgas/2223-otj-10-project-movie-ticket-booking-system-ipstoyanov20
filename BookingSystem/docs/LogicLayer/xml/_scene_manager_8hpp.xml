@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_scene_manager_8hpp" kind="file" language="C++">
+    <compoundname>SceneManager.hpp</compoundname>
+    <includedby refid="_logic_layer_8hpp" local="yes">C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp</includedby>
+    <includedby refid="_scene_manager_8cpp" local="yes">C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/SceneManager.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/LogicLayer.hpp</label>
+        <link refid="_logic_layer_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/SceneManager.hpp</label>
+        <link refid="_scene_manager_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_scene_manager" prot="public">SceneManager</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="class_scene_manager" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_scene_manager" kindref="compound">SceneManager</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>Scenes<sp/>:<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOGIN,</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MENU,</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SEATS,</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TICKET,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}<sp/>direction<sp/>=<sp/>MENU;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/SceneManager.hpp"/>
+  </compounddef>
+</doxygen>

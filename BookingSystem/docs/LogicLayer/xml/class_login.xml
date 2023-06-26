@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_login" kind="class" language="C++" prot="public">
+    <compoundname>Login</compoundname>
+    <derivedcompoundref refid="class_logic_layer" prot="public" virt="non-virtual">LogicLayer</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_login_1a0c3a1d8af3731f9f5b6dd61b91c1b408" prot="protected" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Login::username[MAX_INPUT+1]</definition>
+        <argsstring>[MAX_INPUT+1]</argsstring>
+        <name>username</name>
+        <qualifiedname>Login::username</qualifiedname>
+        <initializer>= &quot;\0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" line="11" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_1a1aab35ce1272cf979426099ef1a218a0" prot="protected" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Login::Hiddenpassword[MAX_INPUT+1]</definition>
+        <argsstring>[MAX_INPUT+1]</argsstring>
+        <name>Hiddenpassword</name>
+        <qualifiedname>Login::Hiddenpassword</qualifiedname>
+        <initializer>= &quot;\0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" line="12" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_1ab8f20e3aa4dc960b679c4af578be7904" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Login::password</definition>
+        <argsstring></argsstring>
+        <name>password</name>
+        <qualifiedname>Login::password</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" line="13" column="13" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_1a0693fb153c3ba72ff4cfa52589a828ce" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Login::letterCountUsername</definition>
+        <argsstring></argsstring>
+        <name>letterCountUsername</name>
+        <qualifiedname>Login::letterCountUsername</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" line="15" column="5" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_1a2d1e800accc19e9c1e5b84c0c7b0eb7e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Login::letterCountPassword</definition>
+        <argsstring></argsstring>
+        <name>letterCountPassword</name>
+        <qualifiedname>Login::letterCountPassword</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" line="16" column="5" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_1a8034953f1ca8dd2bc4e0d18a44e2ed43" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::pair&lt; bool, Rectangle &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::pair&lt;bool, Rectangle&gt; &gt; Login::inputFields</definition>
+        <argsstring></argsstring>
+        <name>inputFields</name>
+        <qualifiedname>Login::inputFields</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" line="21" column="20" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_1a598e45ac4efcfdeb8a7ac538dc23ac7d" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, bool &gt;</type>
+        <definition>std::unordered_map&lt;std::string, bool&gt; Login::incorrectInputLabel</definition>
+        <argsstring></argsstring>
+        <name>incorrectInputLabel</name>
+        <qualifiedname>Login::incorrectInputLabel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" line="23" column="20" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_1a48290b46c5c8250864570134bb674432" prot="protected" static="no" mutable="no">
+        <type>Rectangle</type>
+        <definition>Rectangle Login::submitButton</definition>
+        <argsstring></argsstring>
+        <name>submitButton</name>
+        <qualifiedname>Login::submitButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" line="25" column="11" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_1a464f04027178ecfc458da5da2e394869" prot="protected" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D Login::icon</definition>
+        <argsstring></argsstring>
+        <name>icon</name>
+        <qualifiedname>Login::icon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" line="27" column="11" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_login_1a4688d1c227ef2da07043dd64d20aa3d9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Login::getUserName</definition>
+        <argsstring>(char input[MAX_INPUT], int &amp;letterCount)</argsstring>
+        <name>getUserName</name>
+        <qualifiedname>Login::getUserName</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>input</declname>
+          <array>[MAX_INPUT]</array>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>letterCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" line="18" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.cpp" bodystart="14" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_1adf40aa5675d470470e4ac91bb3661e36" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Login::getPass</definition>
+        <argsstring>(char input[MAX_INPUT], int &amp;letterCount)</argsstring>
+        <name>getPass</name>
+        <qualifiedname>Login::getPass</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>input</declname>
+          <array>[MAX_INPUT]</array>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>letterCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" line="19" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.cpp" bodystart="38" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>LogicLayer</label>
+        <link refid="class_logic_layer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Login</label>
+        <link refid="class_login"/>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" line="4" column="1" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/Login.hpp" bodystart="5" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_login_1adf40aa5675d470470e4ac91bb3661e36" prot="protected" virt="non-virtual"><scope>Login</scope><name>getPass</name></member>
+      <member refid="class_login_1a4688d1c227ef2da07043dd64d20aa3d9" prot="protected" virt="non-virtual"><scope>Login</scope><name>getUserName</name></member>
+      <member refid="class_login_1a1aab35ce1272cf979426099ef1a218a0" prot="protected" virt="non-virtual"><scope>Login</scope><name>Hiddenpassword</name></member>
+      <member refid="class_login_1a464f04027178ecfc458da5da2e394869" prot="protected" virt="non-virtual"><scope>Login</scope><name>icon</name></member>
+      <member refid="class_login_1a598e45ac4efcfdeb8a7ac538dc23ac7d" prot="protected" virt="non-virtual"><scope>Login</scope><name>incorrectInputLabel</name></member>
+      <member refid="class_login_1a8034953f1ca8dd2bc4e0d18a44e2ed43" prot="protected" virt="non-virtual"><scope>Login</scope><name>inputFields</name></member>
+      <member refid="class_login_1a2d1e800accc19e9c1e5b84c0c7b0eb7e" prot="protected" virt="non-virtual"><scope>Login</scope><name>letterCountPassword</name></member>
+      <member refid="class_login_1a0693fb153c3ba72ff4cfa52589a828ce" prot="protected" virt="non-virtual"><scope>Login</scope><name>letterCountUsername</name></member>
+      <member refid="class_login_1ab8f20e3aa4dc960b679c4af578be7904" prot="protected" virt="non-virtual"><scope>Login</scope><name>password</name></member>
+      <member refid="class_login_1a48290b46c5c8250864570134bb674432" prot="protected" virt="non-virtual"><scope>Login</scope><name>submitButton</name></member>
+      <member refid="class_login_1a0c3a1d8af3731f9f5b6dd61b91c1b408" prot="protected" virt="non-virtual"><scope>Login</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

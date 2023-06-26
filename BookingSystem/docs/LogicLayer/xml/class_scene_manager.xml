@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_scene_manager" kind="class" language="C++" prot="public">
+    <compoundname>SceneManager</compoundname>
+    <derivedcompoundref refid="class_logic_layer" prot="public" virt="non-virtual">LogicLayer</derivedcompoundref>
+      <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9" prot="protected" static="no" strong="no">
+        <type>int</type>
+        <name>Scenes</name>
+        <qualifiedname>SceneManager::Scenes</qualifiedname>
+        <enumvalue id="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9a72550b7fe89a1c393a6d087dba53888e" prot="protected">
+          <name>LOGIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9aebeeecc11278853621d4a21149bddc81" prot="protected">
+          <name>MENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9a9f55b0864bbb2ca75fdb35211f879a94" prot="protected">
+          <name>SEATS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9ad7304fbeb39fdde6245f84f3fed2a13c" prot="protected">
+          <name>TICKET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/SceneManager.hpp" line="5" column="1" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/SceneManager.hpp" bodystart="5" bodyend="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_scene_manager_1abf673bb66a186511bb9adab0a69665ab" prot="protected" static="no" mutable="no">
+        <type>enum SceneManager::Scenes</type>
+        <definition>enum SceneManager::Scenes SceneManager::direction</definition>
+        <argsstring></argsstring>
+        <name>direction</name>
+        <qualifiedname>SceneManager::direction</qualifiedname>
+        <initializer>= MENU</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/SceneManager.hpp" line="10" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>LogicLayer</label>
+        <link refid="class_logic_layer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SceneManager</label>
+        <link refid="class_scene_manager"/>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/SceneManager.hpp" line="2" column="1" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/SceneManager.hpp" bodystart="3" bodyend="12"/>
+    <listofallmembers>
+      <member refid="class_scene_manager_1abf673bb66a186511bb9adab0a69665ab" prot="protected" virt="non-virtual"><scope>SceneManager</scope><name>direction</name></member>
+      <member refid="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9a72550b7fe89a1c393a6d087dba53888e" prot="protected" virt="non-virtual"><scope>SceneManager</scope><name>LOGIN</name></member>
+      <member refid="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9aebeeecc11278853621d4a21149bddc81" prot="protected" virt="non-virtual"><scope>SceneManager</scope><name>MENU</name></member>
+      <member refid="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9" prot="protected" virt="non-virtual"><scope>SceneManager</scope><name>Scenes</name></member>
+      <member refid="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9a9f55b0864bbb2ca75fdb35211f879a94" prot="protected" virt="non-virtual"><scope>SceneManager</scope><name>SEATS</name></member>
+      <member refid="class_scene_manager_1ae3e54a1ed164d1559b1013d9e98186a9ad7304fbeb39fdde6245f84f3fed2a13c" prot="protected" virt="non-virtual"><scope>SceneManager</scope><name>TICKET</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

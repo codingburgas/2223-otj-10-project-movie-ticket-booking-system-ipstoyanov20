@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_presentation_layer" kind="class" language="C++" prot="public">
+    <compoundname>PresentationLayer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">LogicLayer</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_presentation_layer_1acadbba7a7475b4f1ea936b0e4d456fba" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::function&lt; void(<ref refid="class_presentation_layer" kindref="compound">PresentationLayer</ref> *)&gt; &gt;</type>
+        <definition>std::vector&lt;std::function&lt;void(PresentationLayer*)&gt; &gt; PresentationLayer::functions</definition>
+        <argsstring></argsstring>
+        <name>functions</name>
+        <qualifiedname>PresentationLayer::functions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" line="17" column="13" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_presentation_layer_1aefcc48812442445144f9390a22ee012d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PresentationLayer::PresentationLayer</definition>
+        <argsstring>()</argsstring>
+        <name>PresentationLayer</name>
+        <qualifiedname>PresentationLayer::PresentationLayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" line="6" column="1" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.cpp" bodystart="4" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_layer_1aa3128aaa8ed429cfb55f456d3b15c488" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PresentationLayer::~PresentationLayer</definition>
+        <argsstring>()</argsstring>
+        <name>~PresentationLayer</name>
+        <qualifiedname>PresentationLayer::~PresentationLayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" line="7" column="1" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_layer_1aebcf3dfc31d08acd6b929724101980e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PresentationLayer::createWindow</definition>
+        <argsstring>()</argsstring>
+        <name>createWindow</name>
+        <qualifiedname>PresentationLayer::createWindow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" line="8" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.cpp" bodystart="31" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_layer_1af56482fc917700b3f8def88e3c31e4b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PresentationLayer::closeWindow</definition>
+        <argsstring>()</argsstring>
+        <name>closeWindow</name>
+        <qualifiedname>PresentationLayer::closeWindow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" line="9" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.cpp" bodystart="234" bodyend="237"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_presentation_layer_1adc640f32b2092929eb773c28348fe30e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PresentationLayer::drawLogin</definition>
+        <argsstring>()</argsstring>
+        <name>drawLogin</name>
+        <qualifiedname>PresentationLayer::drawLogin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" line="11" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.cpp" bodystart="45" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_layer_1a9457c6e5d930e58b99808f049d363a40" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PresentationLayer::drawMenu</definition>
+        <argsstring>()</argsstring>
+        <name>drawMenu</name>
+        <qualifiedname>PresentationLayer::drawMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" line="12" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.cpp" bodystart="98" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_layer_1a13e59149b54cef85fa74e5957ca36ee7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PresentationLayer::drawSeats</definition>
+        <argsstring>()</argsstring>
+        <name>drawSeats</name>
+        <qualifiedname>PresentationLayer::drawSeats</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" line="13" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.cpp" bodystart="169" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_layer_1a714edb3cf7699e5d57d68cb5a1e3bd73" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PresentationLayer::drawSingInButton</definition>
+        <argsstring>()</argsstring>
+        <name>drawSingInButton</name>
+        <qualifiedname>PresentationLayer::drawSingInButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" line="14" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.cpp" bodystart="19" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_presentation_layer_1a738510f369683d84ea667b5a3d1fbb26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PresentationLayer::drawTicket</definition>
+        <argsstring>()</argsstring>
+        <name>drawTicket</name>
+        <qualifiedname>PresentationLayer::drawTicket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" line="15" column="6" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.cpp" bodystart="222" bodyend="232"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>LogicLayer</label>
+      </node>
+      <node id="1">
+        <label>PresentationLayer</label>
+        <link refid="class_presentation_layer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>LogicLayer</label>
+      </node>
+      <node id="1">
+        <label>PresentationLayer</label>
+        <link refid="class_presentation_layer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" line="3" column="1" bodyfile="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/PresentationLayer/PresentationLayer.hpp" bodystart="4" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_presentation_layer_1af56482fc917700b3f8def88e3c31e4b8" prot="public" virt="non-virtual"><scope>PresentationLayer</scope><name>closeWindow</name></member>
+      <member refid="class_presentation_layer_1aebcf3dfc31d08acd6b929724101980e0" prot="public" virt="non-virtual"><scope>PresentationLayer</scope><name>createWindow</name></member>
+      <member refid="class_presentation_layer_1adc640f32b2092929eb773c28348fe30e" prot="private" virt="non-virtual"><scope>PresentationLayer</scope><name>drawLogin</name></member>
+      <member refid="class_presentation_layer_1a9457c6e5d930e58b99808f049d363a40" prot="private" virt="non-virtual"><scope>PresentationLayer</scope><name>drawMenu</name></member>
+      <member refid="class_presentation_layer_1a13e59149b54cef85fa74e5957ca36ee7" prot="private" virt="non-virtual"><scope>PresentationLayer</scope><name>drawSeats</name></member>
+      <member refid="class_presentation_layer_1a714edb3cf7699e5d57d68cb5a1e3bd73" prot="private" virt="non-virtual"><scope>PresentationLayer</scope><name>drawSingInButton</name></member>
+      <member refid="class_presentation_layer_1a738510f369683d84ea667b5a3d1fbb26" prot="private" virt="non-virtual"><scope>PresentationLayer</scope><name>drawTicket</name></member>
+      <member refid="class_presentation_layer_1acadbba7a7475b4f1ea936b0e4d456fba" prot="private" virt="non-virtual"><scope>PresentationLayer</scope><name>functions</name></member>
+      <member refid="class_presentation_layer_1aefcc48812442445144f9390a22ee012d" prot="public" virt="non-virtual"><scope>PresentationLayer</scope><name>PresentationLayer</name></member>
+      <member refid="class_presentation_layer_1aa3128aaa8ed429cfb55f456d3b15c488" prot="public" virt="non-virtual"><scope>PresentationLayer</scope><name>~PresentationLayer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

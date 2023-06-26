@@ -1,0 +1,131 @@
+.TH "LogicLayer" 3Version 1.0" "BookingSystem" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LogicLayer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBLogin\fP, and \fBSceneManager\fP\&.
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Data * \fBdata\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisClicked\fP (Vector2 &mousePos, Rectangle &rect)"
+.br
+.ti -1c
+.RI "bool \fBisUnfocusedClick\fP (Vector2 &mousePos, Rectangle &rect)"
+.br
+.in -1c
+
+Protected Member Functions inherited from \fBLogin\fP
+.in +1c
+.ti -1c
+.RI "void \fBgetUserName\fP (char input[MAX_INPUT], int &letterCount)"
+.br
+.ti -1c
+.RI "void \fBgetPass\fP (char input[MAX_INPUT], int &letterCount)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "Rectangle \fBvisitSiteButton\fP"
+.br
+.ti -1c
+.RI "Texture2D \fBavatar\fP"
+.br
+.ti -1c
+.RI "std::unordered_map< std::string, std::pair< std::pair< Texture2D, std::pair< bool, Rectangle > >, Rectangle > > \fBfilmCard\fP"
+.br
+.ti -1c
+.RI "std::unordered_map< std::string, std::pair< std::pair< std::vector< std::string >, std::pair< int, bool > >, std::pair< std::pair< Rectangle, bool >, std::vector< Rectangle > > > > \fBmenuFields\fP"
+.br
+.ti -1c
+.RI "Vector2 \fBmousePoint\fP"
+.br
+.ti -1c
+.RI "Rectangle \fBseatsLeft\fP [5][4]"
+.br
+.ti -1c
+.RI "Rectangle \fBseatsRight\fP [5][4]"
+.br
+.ti -1c
+.RI "std::vector< std::vector< bool > > \fBSelectedSeatsLeft\fP"
+.br
+.ti -1c
+.RI "std::vector< std::vector< bool > > \fBSelectedSeatsRight\fP"
+.br
+.ti -1c
+.RI "std::string \fBseatNameFromClick\fP"
+.br
+.ti -1c
+.RI "Rectangle \fBsubmitSeatsButton\fP"
+.br
+.ti -1c
+.RI "Rectangle \fBpreviousButton\fP"
+.br
+.ti -1c
+.RI "Rectangle \fBnextButton\fP"
+.br
+.in -1c
+
+Protected Attributes inherited from \fBLogin\fP
+.in +1c
+.ti -1c
+.RI "char \fBusername\fP [MAX_INPUT+1] = '\\0'"
+.br
+.ti -1c
+.RI "char \fBHiddenpassword\fP [MAX_INPUT+1] = '\\0'"
+.br
+.ti -1c
+.RI "std::string \fBpassword\fP = ''"
+.br
+.ti -1c
+.RI "int \fBletterCountUsername\fP = 0"
+.br
+.ti -1c
+.RI "int \fBletterCountPassword\fP = 0"
+.br
+.ti -1c
+.RI "std::unordered_map< std::string, std::pair< bool, Rectangle > > \fBinputFields\fP"
+.br
+.ti -1c
+.RI "std::unordered_map< std::string, bool > \fBincorrectInputLabel\fP"
+.br
+.ti -1c
+.RI "Rectangle \fBsubmitButton\fP"
+.br
+.ti -1c
+.RI "Texture2D \fBicon\fP"
+.br
+.in -1c
+
+Protected Attributes inherited from \fBSceneManager\fP
+.in +1c
+.ti -1c
+.RI "enum SceneManager::Scenes \fBdirection\fP = MENU"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Protected Types inherited from \fBSceneManager\fP
+.in +1c
+.ti -1c
+.RI "enum \fBScenes\fP : int { \fBLOGIN\fP, \fBMENU\fP, \fBSEATS\fP, \fBTICKET\fP }"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BookingSystem from the source code\&.

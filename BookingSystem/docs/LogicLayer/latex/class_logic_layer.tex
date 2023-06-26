@@ -1,0 +1,115 @@
+\doxysection{Logic\+Layer Class Reference}
+\hypertarget{class_logic_layer}{}\label{class_logic_layer}\index{LogicLayer@{LogicLayer}}
+Inheritance diagram for Logic\+Layer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_logic_layer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_logic_layer_aa76a6e164d978b1bb707ed8e94c77cf8}\label{class_logic_layer_aa76a6e164d978b1bb707ed8e94c77cf8} 
+Data \texorpdfstring{$\ast$}{*} {\bfseries data}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_logic_layer_ac27007e50775b946748ae77134e5e55f}\label{class_logic_layer_ac27007e50775b946748ae77134e5e55f} 
+bool {\bfseries is\+Clicked} (Vector2 \&mouse\+Pos, Rectangle \&rect)
+\item 
+\Hypertarget{class_logic_layer_a9a7f95a20b27ef51ca16a742cda5345d}\label{class_logic_layer_a9a7f95a20b27ef51ca16a742cda5345d} 
+bool {\bfseries is\+Unfocused\+Click} (Vector2 \&mouse\+Pos, Rectangle \&rect)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_login}{Login}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries get\+User\+Name} (char input\mbox{[}MAX\+\_\+\+INPUT\mbox{]}, int \&letter\+Count)
+\item 
+void {\bfseries get\+Pass} (char input\mbox{[}MAX\+\_\+\+INPUT\mbox{]}, int \&letter\+Count)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_logic_layer_adbbb0a0fe41f4712041d026d591692fb}\label{class_logic_layer_adbbb0a0fe41f4712041d026d591692fb} 
+Rectangle {\bfseries visit\+Site\+Button}
+\item 
+\Hypertarget{class_logic_layer_a305efb033da7d99aa91f8bacefb09f9f}\label{class_logic_layer_a305efb033da7d99aa91f8bacefb09f9f} 
+Texture2D {\bfseries avatar}
+\item 
+\Hypertarget{class_logic_layer_a984036e41e134c4201c713b15cd259f6}\label{class_logic_layer_a984036e41e134c4201c713b15cd259f6} 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::pair$<$ std\+::pair$<$ Texture2D, std\+::pair$<$ bool, Rectangle $>$ $>$, Rectangle $>$ $>$ {\bfseries film\+Card}
+\item 
+\Hypertarget{class_logic_layer_a79071028166bf2d551e57aa0fc8d22ad}\label{class_logic_layer_a79071028166bf2d551e57aa0fc8d22ad} 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::pair$<$ std\+::pair$<$ std\+::vector$<$ std\+::string $>$, std\+::pair$<$ int, bool $>$ $>$, std\+::pair$<$ std\+::pair$<$ Rectangle, bool $>$, std\+::vector$<$ Rectangle $>$ $>$ $>$ $>$ {\bfseries menu\+Fields}
+\item 
+\Hypertarget{class_logic_layer_a28c0a2f436654d64602021cc73f3f89f}\label{class_logic_layer_a28c0a2f436654d64602021cc73f3f89f} 
+Vector2 {\bfseries mouse\+Point}
+\item 
+\Hypertarget{class_logic_layer_a40cf87791b0661ac4c1179fee62a0aff}\label{class_logic_layer_a40cf87791b0661ac4c1179fee62a0aff} 
+Rectangle {\bfseries seats\+Left} \mbox{[}5\mbox{]}\mbox{[}4\mbox{]}
+\item 
+\Hypertarget{class_logic_layer_ab4a256bcf663c7debbfadf77684d07b0}\label{class_logic_layer_ab4a256bcf663c7debbfadf77684d07b0} 
+Rectangle {\bfseries seats\+Right} \mbox{[}5\mbox{]}\mbox{[}4\mbox{]}
+\item 
+\Hypertarget{class_logic_layer_a33620ad7f51319a5b178168a0586a6f8}\label{class_logic_layer_a33620ad7f51319a5b178168a0586a6f8} 
+std\+::vector$<$ std\+::vector$<$ bool $>$ $>$ {\bfseries Selected\+Seats\+Left}
+\item 
+\Hypertarget{class_logic_layer_a357edc494cc9bdcd75f75befac656e32}\label{class_logic_layer_a357edc494cc9bdcd75f75befac656e32} 
+std\+::vector$<$ std\+::vector$<$ bool $>$ $>$ {\bfseries Selected\+Seats\+Right}
+\item 
+\Hypertarget{class_logic_layer_af4e3d4291ab6fea82cddd9ced67fc575}\label{class_logic_layer_af4e3d4291ab6fea82cddd9ced67fc575} 
+std\+::string {\bfseries seat\+Name\+From\+Click}
+\item 
+\Hypertarget{class_logic_layer_ad3c9c0b6052a512a08670b4fd76d0e07}\label{class_logic_layer_ad3c9c0b6052a512a08670b4fd76d0e07} 
+Rectangle {\bfseries submit\+Seats\+Button}
+\item 
+\Hypertarget{class_logic_layer_a29ad5c5080c7987d3628f0803dd5add0}\label{class_logic_layer_a29ad5c5080c7987d3628f0803dd5add0} 
+Rectangle {\bfseries previous\+Button}
+\item 
+\Hypertarget{class_logic_layer_a026301f415f4f8ef2430721e7ee7f4fa}\label{class_logic_layer_a026301f415f4f8ef2430721e7ee7f4fa} 
+Rectangle {\bfseries next\+Button}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_login}{Login}}}
+\begin{DoxyCompactItemize}
+\item 
+char {\bfseries username} \mbox{[}MAX\+\_\+\+INPUT+1\mbox{]} = \"{}\textbackslash{}0\"{}
+\item 
+char {\bfseries Hiddenpassword} \mbox{[}MAX\+\_\+\+INPUT+1\mbox{]} = \"{}\textbackslash{}0\"{}
+\item 
+std\+::string {\bfseries password} = \"{}\"{}
+\item 
+int {\bfseries letter\+Count\+Username} = 0
+\item 
+int {\bfseries letter\+Count\+Password} = 0
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::pair$<$ bool, Rectangle $>$ $>$ {\bfseries input\+Fields}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, bool $>$ {\bfseries incorrect\+Input\+Label}
+\item 
+Rectangle {\bfseries submit\+Button}
+\item 
+Texture2D {\bfseries icon}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}}}
+\begin{DoxyCompactItemize}
+\item 
+enum Scene\+Manager\+::\+Scenes {\bfseries direction} = MENU
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Types inherited from \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_scene_manager_ae3e54a1ed164d1559b1013d9e98186a9}\label{class_scene_manager_ae3e54a1ed164d1559b1013d9e98186a9} 
+enum {\bfseries Scenes} \+: int \{ {\bfseries LOGIN}
+, {\bfseries MENU}
+, {\bfseries SEATS}
+, {\bfseries TICKET}
+ \}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gamer/\+Desktop/2223-\/otj-\/10-\/project-\/movie-\/ticket-\/booking-\/system-\/ipstoyanov20/\+Booking\+System/\+Logic\+Layer/Logic\+Layer.\+hpp\item 
+C\+:/\+Users/\+Gamer/\+Desktop/2223-\/otj-\/10-\/project-\/movie-\/ticket-\/booking-\/system-\/ipstoyanov20/\+Booking\+System/\+Logic\+Layer/Logic\+Layer.\+cpp\end{DoxyCompactItemize}

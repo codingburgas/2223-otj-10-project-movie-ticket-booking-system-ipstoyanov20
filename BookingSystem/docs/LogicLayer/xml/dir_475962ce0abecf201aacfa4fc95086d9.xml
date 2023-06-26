@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_475962ce0abecf201aacfa4fc95086d9" kind="dir">
+    <compoundname>C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer</compoundname>
+    <innerfile refid="_logic_layer_8cpp">LogicLayer.cpp</innerfile>
+    <innerfile refid="_logic_layer_8hpp">LogicLayer.hpp</innerfile>
+    <innerfile refid="_login_8cpp">Login.cpp</innerfile>
+    <innerfile refid="_login_8hpp">Login.hpp</innerfile>
+    <innerfile refid="pch_8cpp">pch.cpp</innerfile>
+    <innerfile refid="pch_8h">pch.h</innerfile>
+    <innerfile refid="_scene_manager_8cpp">SceneManager.cpp</innerfile>
+    <innerfile refid="_scene_manager_8hpp">SceneManager.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/LogicLayer/"/>
+  </compounddef>
+</doxygen>

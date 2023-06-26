@@ -1,0 +1,37 @@
+\doxysection{Login.\+hpp}
+\hypertarget{_login_8hpp_source}{}\label{_login_8hpp_source}\index{C:/Users/Gamer/Desktop/2223-\/otj-\/10-\/project-\/movie-\/ticket-\/booking-\/system-\/ipstoyanov20/BookingSystem/LogicLayer/Login.hpp@{C:/Users/Gamer/Desktop/2223-\/otj-\/10-\/project-\/movie-\/ticket-\/booking-\/system-\/ipstoyanov20/BookingSystem/LogicLayer/Login.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}pch.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ MAX\_INPUT\ 10}}
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_login}{Login}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Login();}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ \ \ \ \ \string~Login();*/}}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ variables\ for\ username\ and\ password\ (vectors\ of\ chars)\ and\ ractangles\ for\ login\ form\ (userbname\ and\ password\ fields)\ also\ title\ for\ form\ and\ labels\ for\ input\ fields}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ username[MAX\_INPUT\ +\ 1]\ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}};}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ Hiddenpassword[MAX\_INPUT\ +\ 1]\ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}};}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ std::string\ password\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ letterCountUsername\ =\ 0;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ letterCountPassword\ =\ 0;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ getUserName(\textcolor{keywordtype}{char}\ input[MAX\_INPUT],\ \textcolor{keywordtype}{int}\&letterCount);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ getPass(\textcolor{keywordtype}{char}\ input[MAX\_INPUT],\ \textcolor{keywordtype}{int}\&letterCount);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ std::pair<bool,\ Rectangle>>\ inputFields;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ bool>\ incorrectInputLabel;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ Rectangle\ submitButton;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ Texture2D\ icon;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+
+\end{DoxyCode}

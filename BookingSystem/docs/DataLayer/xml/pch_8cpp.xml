@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="pch_8cpp" kind="file" language="C++">
+    <compoundname>pch.cpp</compoundname>
+    <includes refid="pch_8h" local="yes">pch.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/DataLayer/pch.cpp</label>
+        <link refid="pch_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pch.h</label>
+        <link refid="pch_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>lib/nanodbc/nanodbc.h</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>pch.cpp:<sp/>source<sp/>file<sp/>corresponding<sp/>to<sp/>the<sp/>pre-compiled<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>When<sp/>you<sp/>are<sp/>using<sp/>pre-compiled<sp/>headers,<sp/>this<sp/>source<sp/>file<sp/>is<sp/>necessary<sp/>for<sp/>compilation<sp/>to<sp/>succeed.</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Gamer/Desktop/2223-otj-10-project-movie-ticket-booking-system-ipstoyanov20/BookingSystem/DataLayer/pch.cpp"/>
+  </compounddef>
+</doxygen>
