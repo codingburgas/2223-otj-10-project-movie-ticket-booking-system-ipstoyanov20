@@ -4,7 +4,7 @@ LogicLayer::LogicLayer()
 {
 	InitWindow(0, 0, "MovieBookingSystem");
 	SetTargetFPS(60);
-	//ToggleFullscreen();
+	ToggleFullscreen();
 	data = Data::getInstance();
 	inputFields = {
 		{
